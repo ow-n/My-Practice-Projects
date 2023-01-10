@@ -4,6 +4,9 @@ Collection of my programs.
 ## Java
 
 ## C++
-1. Arrays - Student
-2. Functions - Scope
-3. Loops & Files - Nested
+- Arrays - Student
+- Functions - Scope
+- Loops & Files - Nested
+
+Programming Challenges:
+1. colorMixer
