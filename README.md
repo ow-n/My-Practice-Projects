@@ -10,3 +10,4 @@ Collection of my programs.
 
 Programming Challenges:
 1. colorMixer
+2. daysInAMonth
