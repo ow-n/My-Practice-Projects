@@ -1,0 +1,4 @@
+The smallest number in the array is 5
+The largest number in the array is 15
+The total of the numbers in the array is 50
+The average of the nubmers in the array is 10
