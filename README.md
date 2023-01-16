@@ -12,3 +12,4 @@ Programming Challenges:
 1. colorMixer
 2. daysInAMonth
 3. numberAnalysis
+4. numberGuessingGame
