@@ -13,3 +13,4 @@ Programming Challenges:
 2. daysInAMonth
 3. numberAnalysis
 4. numberGuessingGame
+5. printingASCIICodes
