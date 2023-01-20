@@ -14,3 +14,4 @@ Programming Challenges:
 3. numberAnalysis
 4. numberGuessingGame
 5. printingASCIICodes
+6. rockPaperScissors
