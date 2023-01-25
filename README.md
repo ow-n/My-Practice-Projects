@@ -2,6 +2,7 @@
 Collection of my programs.
 
 ## Java
+- Coin Toss
 
 ## C++
 - Arrays - Student
