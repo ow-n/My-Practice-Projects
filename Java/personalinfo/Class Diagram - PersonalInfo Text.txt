@@ -1,0 +1,30 @@
++-----------------------------------+
+|            PersonalInfo           |
++-----------------------------------+
+| - name: String				|
+| - age: int				|
+| - gender: String			|
+| - nationality: String			|
++-----------------------------------+
+| + PersonalInfo(name: String, age: |
+|	int, gender: String,		|
+|	nationality: String)		|
+|						|
+| + getName(): String			|
+| + getAge(): int				|
+| + getGender(): String			|
+| + getNationality(): String		|
+| + setName(name: String): void	|
+| + setAge(age: int): void		|
+| + setGender(gender: String): void	|
+| + setNationality(nationality: 	|
+|	String): void			|	
++-----------------------------------+
+
++-----------------------------------+
+|         PersonalInfoDriver       	|
++-----------------------------------+
+|						|
++-----------------------------------+
+| + main(args: String[]); void	|
++-----------------------------------+
