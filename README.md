@@ -3,6 +3,7 @@ Collection of my programs.
 
 ## Java
 - Coin Toss
+- Info Storage
 
 ## C++
 - Arrays - Student
