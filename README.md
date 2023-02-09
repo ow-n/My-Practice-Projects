@@ -4,6 +4,7 @@ Collection of my programs.
 ## Java
 - Coin Toss
 - Info Storage
+- Sales Data
 
 ## C++
 - Arrays - Student
