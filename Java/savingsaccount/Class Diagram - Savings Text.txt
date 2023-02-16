@@ -1,0 +1,80 @@
+SpecialSavings extends SavingsAccount
++------------------------------------------------+
+|                 SavingsAccount                 |
++------------------------------------------------+
+| # MONTHS_IN_YEAR: int                          |
+| # DECIMAL_TO_PERCENT: int                      |
+| # annualInterestRate: double                   |
+| # month: int                                   |
+| - savingsBal: double                           |
+| - lastSavingsBal: double                       |
+| - cashBal: double                              |
+| - lastCashBal: double                          |
+| - name: String                                 |
+| - accountCounter: int                          |
++------------------------------------------------+
+| # SavingsAccount(savingsBal: double)           |
+| # SavingsAccount(savingsBal: double, name:     |
+|   String, cashBal: double)                     |
+| # getAnnualInterestRate(): double              |
+| # setAnnualInterestRate(annualInterestRate:    |
+|   double): void                                |
+| # getSavingsBal(): double                      |
+| # setSavingsBal(savingsBal: double): void      |
+| # getLastSavingsBal(): double                  |
+| # setLastSavingsBal(lastSavingsBal: double):   |
+|   void                                         |
+| # getCashBal(): double                         |
+| # setCashBal(cashBal: double): void            |
+| # getLastCashBal(): double                     |
+| # setLastCashBal(lastCashBal: double): void    |
+| # getMonth(): int                              |
+| # setMonth(month: int): void                   |
+| # getName(): String                            |
+| # setName(name: String): void                  |
+| # CalculateMonthlyInterest(): void             |
+| # ModifyInterestRate(newInterestRate: double): |
+|   void                                         |
+| # printSavingsBal(): void                      |
+| # depositCash(depositAmt: double): void        |
+| # withdrawCash(withdrawAmt: double): void      |
+| # addCashBal(addcashBalAmt: double): void      |
+| # printCashBal(): void                         |
+| # transferSavingsBal(saverNum: SavingsAccount, |
+|   transferAmt: double): void                   |
++------------------------------------------------+
+
++----------------------------------------+
+|             SpecialSavings             |
++----------------------------------------+
+| - SPECIAL_SAVINGS_RATE: double         |
+| # SPECIAL_SAVINGS_REQUIREMENT: double  |
+|    double                              |
+| - USER_YES: String                     |
+| - proceed: String                      |
+| # input: Scanner                       |
++----------------------------------------+
+| # SpecialSavings(savingsBal: double)   |
+| # SpecialSavings(savingsBal: double,   |
+|   name: String, cash: double)          |
+| # getProceed(): String                 |
+| # setProceed(proceed: String): void    |
+| # calculateMonthlyInterest(): void     |
+| # closeScanner(): void                 |
++----------------------------------------+
+
++--------------------------------+
+|      SavingsAccountDriver      |
++--------------------------------+
+|                                |
++--------------------------------+
+| + main(args: String[]): void   |
++--------------------------------+
+
++-------------------------------------+
+|         SpecialSavingsDriver        |
++-------------------------------------+
+|                                     |
++-------------------------------------+
+| + main(args: String[]): void        |
++-------------------------------------+
