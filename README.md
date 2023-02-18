@@ -5,6 +5,7 @@ Collection of my programs.
 - Coin Toss
 - Info Storage
 - Sales Data
+- Savings Account
 
 ## C++
 - Arrays - Student
