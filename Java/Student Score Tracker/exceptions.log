@@ -1,0 +1,382 @@
+Student Grading Exception
+java.io.FileNotFoundException: C:\Users\yuuyu\Documents\Eclipse Workspace\Java_Intro\src\studentscores (Access is denied)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at studentscores.Util.readFile(Util.java:14)
+	at driver.Driver1.main(Driver1.java:24)
+
+Student Grading Exception
+java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 10
+	at studentscores.Util.readFile(Util.java:30)
+	at driver.Driver1.main(Driver1.java:31)
+
+Student Grading Exception
+java.io.FileNotFoundException: C:\Users\yuuyu\Documents\Eclipse Workspace\Java_Intro\src\studentscores (Access is denied)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at studentscores.Util.readFile(Util.java:14)
+	at driver.Driver1.main(Driver1.java:24)
+
+Student Grading Exception
+java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 10
+	at studentscores.Util.readFile(Util.java:30)
+	at driver.Driver1.main(Driver1.java:31)
+
+Student Grading Exception
+java.io.FileNotFoundException: C:\Users\yuuyu\Documents\Eclipse Workspace\Java_Intro\src\studentscores (Access is denied)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at studentscores.Util.readFile(Util.java:14)
+	at driver.Driver1.main(Driver1.java:24)
+
+Student Grading Exception
+java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 10
+	at studentscores.Util.readFile(Util.java:30)
+	at driver.Driver1.main(Driver1.java:31)
+
+Student Grading Exception
+java.io.FileNotFoundException: C:\Users\yuuyu\Documents\Eclipse Workspace\Java_Intro\src\studentscores (Access is denied)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at studentscores.Util.readFile(Util.java:14)
+	at driver.Driver1.main(Driver1.java:24)
+
+Student Grading Exception
+java.io.FileNotFoundException: C:\Users\yuuyu (Access is denied)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at studentscores.Util.readFile(Util.java:14)
+	at studentscores.DriverStudentScores.main(DriverStudentScores.java:20)
+
+Student Grading Exception
+java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 10
+	at studentscores.Util.readFile(Util.java:30)
+	at studentscores.DriverStudentScores.main(DriverStudentScores.java:27)
+
+Student Grading Exception
+java.io.FileNotFoundException: C:\Users\yuuyu (Access is denied)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at studentscores.Util.readFile(Util.java:14)
+	at studentscores.DriverStudentScores.main(DriverStudentScores.java:20)
+
+Student Grading Exception
+java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 10
+	at studentscores.Util.readFile(Util.java:30)
+	at studentscores.DriverStudentScores.main(DriverStudentScores.java:27)
+
+Student Grading Exception
+java.io.FileNotFoundException: C:\Users\yuuyu (Access is denied)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at studentscores.Util.readFile(Util.java:14)
+	at studentscores.DriverStudentScores.main(DriverStudentScores.java:20)
+
+Student Grading Exception
+java.io.FileNotFoundException: C:\Users\yuuyu (Access is denied)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at studentscores.Util.readFile(Util.java:14)
+	at studentscores.DriverStudentScores.main(DriverStudentScores.java:20)
+
+Student Grading Exception
+java.lang.ArrayIndexOutOfBoundsException: Index 6 out of bounds for length 6
+	at studentscores.Util.readFile(Util.java:35)
+	at driver.DriverGradeBook.main(DriverGradeBook.java:34)
+
+Student Grading Exception
+java.io.StreamCorruptedException: invalid stream header: 53747564
+	at java.base/java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:987)
+	at java.base/java.io.ObjectInputStream.<init>(ObjectInputStream.java:414)
+	at util.FileIO.deserializeStudentGrade(FileIO.java:50)
+	at driver.Driver2.main(Driver2.java:28)
+
+Student Grading Exception
+java.io.FileNotFoundException: C:\Users\yuuyu\Documents\Eclipse Workspace\Java_Intro\src\studentscores (Access is denied)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at studentscores.Util.readFile(Util.java:15)
+	at driver.Driver1.main(Driver1.java:24)
+
+Student Grading Exception
+java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 10
+	at studentscores.Util.readFile(Util.java:51)
+	at driver.Driver1.main(Driver1.java:31)
+
+Student Grading Exception
+java.io.FileNotFoundException: C:\Users\yuuyu\Documents\Eclipse Workspace\Java_Intro\src\studentscores (Access is denied)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at studentscores.Util.readFile(Util.java:15)
+	at driver.Driver1.main(Driver1.java:24)
+
+Student Grading Exception
+java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 10
+	at studentscores.Util.readFile(Util.java:51)
+	at driver.Driver1.main(Driver1.java:31)
+
+Student Grading Exception
+java.io.FileNotFoundException: C:\Users\yuuyu\Documents\Eclipse Workspace\Java_Intro\src\studentscores (Access is denied)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at studentscores.Util.readFile(Util.java:15)
+	at driver.Driver1.main(Driver1.java:24)
+
+Student Grading Exception
+java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 10
+	at studentscores.Util.readFile(Util.java:51)
+	at driver.Driver1.main(Driver1.java:31)
+
+Student Grading Exception
+java.io.FileNotFoundException: C:\Users\yuuyu\Documents\Eclipse Workspace\Java_Intro\src\studentscores (Access is denied)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at studentscores.Util.readFile(Util.java:15)
+	at driver.Driver1.main(Driver1.java:24)
+
+Student Grading Exception
+java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 10
+	at studentscores.Util.readFile(Util.java:51)
+	at driver.Driver1.main(Driver1.java:31)
+
+Student Grading Exception
+java.io.FileNotFoundException: C:\Users\yuuyu\Documents\Eclipse Workspace\Java_Intro\src\studentscores\Chemistry Scoresstudentscores\Chemistry Scores (The system cannot find the path specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at studentscores.Util.readFile(Util.java:15)
+	at driver.DriverGradeBook.main(DriverGradeBook.java:38)
+
+Student Grading Exception
+java.io.FileNotFoundException: C:\Users\yuuyu\Documents\Eclipse Workspace\Java_Intro\src\studentscores\Chemistry Scores.txtstudentscores\Chemistry Scores (The system cannot find the path specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at studentscores.Util.readFile(Util.java:15)
+	at driver.DriverGradeBook.main(DriverGradeBook.java:38)
+
+Student Grading Exception
+java.io.FileNotFoundException: C:\Users\yuuyu\Documents\Eclipse Workspace\Java_Intro\src\studentscores\Chemistry Scores.txtstudentscores\Chemistry Scores (The system cannot find the path specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at studentscores.Util.readFile(Util.java:15)
+	at driver.DriverGradeBook.main(DriverGradeBook.java:38)
+
+Student Grading Exception
+java.io.FileNotFoundException: C:\Users\yuuyu\Documents\Eclipse Workspace\Java_Intro\src\studentscores\Chemistry Scores.txt (The system cannot find the file specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at studentscores.Util.readFile(Util.java:15)
+	at driver.DriverGradeBook.main(DriverGradeBook.java:37)
+
+Student Grading Exception
+java.io.FileNotFoundException: C:\Users\yuuyu\Documents\Eclipse Workspace\Java_Intro\src\studentscores\Student Scores" (The filename, directory name, or volume label syntax is incorrect)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at studentscores.Util.readFile(Util.java:15)
+	at driver.DriverGradeBook.main(DriverGradeBook.java:39)
+
+Student Grading Exception
+java.io.FileNotFoundException: C:\Users\yuuyu\Documents\Eclipse Workspace\Java_Intro\src\studentscores\Chemistry Scores.txt (The system cannot find the file specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at studentscores.Util.readFile(Util.java:15)
+	at driver.DriverGradeBook.main(DriverGradeBook.java:37)
+
+Student Grading Exception
+java.io.FileNotFoundException: C:\Users\yuuyu (Access is denied)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at studentscores.Util.readFile(Util.java:15)
+	at studentscores.DriverStudentScores.main(DriverStudentScores.java:20)
+
+Student Grading Exception
+java.io.FileNotFoundException: C:\Users\yuuyu (Access is denied)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at studentscores.Util.readFile(Util.java:15)
+	at studentscores.DriverStudentScores.main(DriverStudentScores.java:20)
+
+Student Grading Exception
+java.io.FileNotFoundException: C:\Users\yuuyu (Access is denied)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at studentscores.Util.readFile(Util.java:15)
+	at studentscores.DriverStudentScores.main(DriverStudentScores.java:20)
+
+Student Grading Exception
+java.io.FileNotFoundException: C:\Users\yuuyu (Access is denied)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at studentscores.Util.readFile(Util.java:15)
+	at studentscores.DriverStudentScores.main(DriverStudentScores.java:20)
+
+Student Grading Exception
+java.io.FileNotFoundException: C:\Users\yuuyu\Documents\Eclipse Workspace\Java_Intro\src\studentscores (Access is denied)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at studentscores.Util.readFile(Util.java:15)
+	at driver.Driver1.main(Driver1.java:24)
+
+Student Grading Exception
+java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 10
+	at studentscores.Util.readFile(Util.java:45)
+	at driver.Driver1.main(Driver1.java:31)
+
+Student Grading Exception
+java.io.FileNotFoundException: C:\Users\yuuyu\Documents\Eclipse Workspace\Java_Intro\src\studentscores (Access is denied)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at studentscores.Util.readFile(Util.java:16)
+	at driver.Driver1.main(Driver1.java:24)
+
+Student Grading Exception
+java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 10
+	at studentscores.Util.readFile(Util.java:47)
+	at driver.Driver1.main(Driver1.java:31)
+
+Student Grading Exception
+java.io.FileNotFoundException: C:\Users\yuuyu (Access is denied)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at studentscores.Util.readFile(Util.java:16)
+	at studentscores.DriverStudentScores.main(DriverStudentScores.java:20)
+
+Student Grading Exception
+java.io.FileNotFoundException: C:\Users\yuuyu\Documents\Eclipse Workspace\Java_Intro\src\studentscores (Access is denied)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at studentscores.Util.readFile(Util.java:16)
+	at driver.Driver1.main(Driver1.java:24)
+
+Student Grading Exception
+java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 10
+	at studentscores.Util.readFile(Util.java:47)
+	at driver.Driver1.main(Driver1.java:31)
+
+Student Grading Exception
+java.io.FileNotFoundException: C:\Users\yuuyu (Access is denied)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at studentscores.Util.readFile(Util.java:15)
+	at studentscores.DriverStudentScores.main(DriverStudentScores.java:14)
+
+Student Grading Exception
+java.io.FileNotFoundException: C:\Users\yuuyu (Access is denied)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at studentscores.Util.readFile(Util.java:15)
+	at driver.Driver1.main(Driver1.java:17)
+
+Student Grading Exception
+java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 10
+	at studentscores.Util.readFile(Util.java:42)
+	at driver.Driver1.main(Driver1.java:24)
+
+Student Grading Exception
+java.io.FileNotFoundException: C:\Users\yuuyu (Access is denied)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at studentscores.Util.readFile(Util.java:15)
+	at studentscores.DriverStudentScores.main(DriverStudentScores.java:14)
+
+Student Grading Exception
+java.io.FileNotFoundException: C:\Users\yuuyu (Access is denied)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at studentscores.Util.readFile(Util.java:15)
+	at driver.Driver1.main(Driver1.java:17)
+
+Student Grading Exception
+java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 10
+	at studentscores.Util.readFile(Util.java:42)
+	at driver.Driver1.main(Driver1.java:24)
+
