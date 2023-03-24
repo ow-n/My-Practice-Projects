@@ -1,0 +1,245 @@
+         	Assignment 5/6/7: Student Scores
++===================================================+
+
+			DriverStudentScores
++---------------------------------------------------+
+exception.StudentGradingException: Student Grading Exception: Error reading file
+	at studentscores.Util.readFile(Util.java:50)
+	at studentscores.DriverStudentScores.main(DriverStudentScores.java:14)
+Caused by: java.io.FileNotFoundException: C:\Users\yuuyu (Access is denied)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at studentscores.Util.readFile(Util.java:15)
+	... 1 more
+
+Student 1's Scores
+Exam 1: 90
+Exam 2: 36
+Exam 3: 90
+Exam 4: 77
+Exam 5: 30
+
+Stud Qu1 Qu2 Qu3 Qu4 Qu5
+1234  52   7 100  78  34
+2134  90  36  90  77  30
+3124 100  45  20  90  70
+4532  11  17  81  32  77
+5678  20  12  45  78  34
+6134  34  80  55  78  45
+7874  60 100  56  78  78
+8026  70  10  66  78  56
+9893  34   9  77  78  20
+1947  45  40  88  78  55
+2877  55  50  99  78  80
+3189  22  70 100  78  77
+4602  89  50  91  78  60
+5405  11  11   0  78  10
+6999   0  98  89  78  20
+
+Lowest Scores
+Test 1: 0
+Test 2: 7
+Test 3: 0
+Test 4: 11
+Test 5: 10
+
+Highest Scores
+Test 1: 100
+Test 2: 100
+Test 3: 100
+Test 4: 90
+Test 5: 80
+
+Average Scores
+Test 1: 46.20
+Test 2: 42.33
+Test 3: 70.47
+Test 4: 75.67
+Test 5: 49.73
+
+
+
+				Driver1
++---------------------------------------------------+
+exception.StudentGradingException: Student Grading Exception: Error reading file
+	at studentscores.Util.readFile(Util.java:50)
+	at driver.Driver1.main(Driver1.java:17)
+Caused by: java.io.FileNotFoundException: C:\Users\yuuyu (Access is denied)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at studentscores.Util.readFile(Util.java:15)
+	... 1 more
+
+exception.StudentGradingException: Student Grading Exception: Array Error
+	at studentscores.Util.readFile(Util.java:54)
+	at driver.Driver1.main(Driver1.java:24)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 10
+	at studentscores.Util.readFile(Util.java:42)
+	... 1 more
+
+If student's scores are printed, then exceptions are fixed.
+
+Student 1's Scores
+Exam 1: 90
+Exam 2: 36
+Exam 3: 90
+Exam 4: 77
+Exam 5: 30
+
+[Fixed]
+
+End of program.
+
+
+
+
+				Driver2
++---------------------------------------------------+
+Serialized data is saved in C:\Users\yuuyu\Documents\Eclipse Workspace\Java_Intro\student_grades.ser
+
+Deserialized data from C:\Users\yuuyu\Documents\Eclipse Workspace\Java_Intro\student_grades.ser
+
+Stud Qu1 Qu2 Qu3 Qu4 Qu5
+1234  52   7 100  78  34
+2134  90  36  90  77  30
+3124 100  45  20  90  70
+4532  11  17  81  32  77
+5678  20  12  45  78  34
+6134  34  80  55  78  45
+7874  60 100  56  78  78
+8026  70  10  66  78  56
+9893  34   9  77  78  20
+1947  45  40  88  78  55
+2877  55  50  99  78  80
+3189  22  70 100  78  77
+4602  89  50  91  78  60
+5405  11  11   0  78  10
+6999   0  98  89  78  20
+
+
+
+				Driver3
++---------------------------------------------------+
+Serialized data is saved in C:\Users\yuuyu\Documents\Eclipse Workspace\Java_Intro\student_grades.ser
+
+Deserialized data from C:\Users\yuuyu\Documents\Eclipse Workspace\Java_Intro\student_grades.ser
+
+Deserialized Student statistics:
+Lowest Scores
+Test 1: 0
+Test 2: 7
+Test 3: 0
+Test 4: 11
+Test 5: 10
+
+Highest Scores
+Test 1: 100
+Test 2: 100
+Test 3: 100
+Test 4: 90
+Test 5: 80
+
+Average Scores
+Test 1: 46.20
+Test 2: 42.33
+Test 3: 70.47
+Test 4: 75.67
+Test 5: 49.73
+
+Scores for deserialized student with ID 1234:
+Student 0's Scores
+Exam 1: 52
+Exam 2: 7
+Exam 3: 100
+Exam 4: 78
+Exam 5: 34
+
+Scores for deserialized student with ID 0000:
+Student with ID 0 not found.
+
+
+
+			 DriverGradeBook
++---------------------------------------------------+
+Serialized gradebook data is saved in C:\Users\yuuyu\Documents\Eclipse Workspace\Java_Intro\student_grades.ser
+
+Deserialized data from C:\Users\yuuyu\Documents\Eclipse Workspace\Java_Intro\student_grades.ser
+
+* * * * * * * * * * * * * * * * * * *
+
+Gradebook read from serialized file:
+====================================
+Chemistry Class Stats
+---------------------
+Lowest Scores
+Test 1: 1
+Test 2: 2
+Test 3: 0
+Test 4: 4
+Test 5: 5
+
+Highest Scores
+Test 1: 999
+Test 2: 998
+Test 3: 997
+Test 4: 996
+Test 5: 995
+
+Average Scores
+Test 1: 109.40
+Test 2: 102.00
+Test 3: 124.40
+Test 4: 131.93
+Test 5: 112.80
+
+Computer Science Class Stats
+---------------------
+Lowest Scores
+Test 1: 6
+Test 2: 7
+Test 3: 0
+Test 4: 9
+Test 5: 10
+
+Highest Scores
+Test 1: 994
+Test 2: 993
+Test 3: 992
+Test 4: 991
+Test 5: 990
+
+Average Scores
+Test 1: 109.40
+Test 2: 102.00
+Test 3: 124.40
+Test 4: 131.93
+Test 5: 112.80
+
+Default Class Stats
+---------------------
+Lowest Scores
+Test 1: 0
+Test 2: 7
+Test 3: 0
+Test 4: 11
+Test 5: 10
+
+Highest Scores
+Test 1: 100
+Test 2: 100
+Test 3: 100
+Test 4: 90
+Test 5: 80
+
+Average Scores
+Test 1: 46.20
+Test 2: 42.33
+Test 3: 70.47
+Test 4: 75.67
+Test 5: 49.73
