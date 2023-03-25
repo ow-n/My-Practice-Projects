@@ -1,0 +1,211 @@
+package: studentscores
++-------------------------------------------------------+
+|             			Student             			|
++-------------------------------------------------------+
+| - SID: int                      						|
+| - scores: int[5]                						|
++-------------------------------------------------------+
+| + Student(SID: int, scores: int[5]) 					|
+| + Student(SID: int) 									|
+| + getSID(): int                 						|
+| + setSID(sid: int): void        						|
+| + getScores(): int[5]          						|
+| + getScoreIndex(index: int): int						|
+| + setScores(scores: int[]): void						|
+|														|
+| + printSID(): void									|
+| + printSID(classroom: Student[], pupil: int): void	|
++-------------------------------------------------------+
+
++-------------------------------------------------------+
+|  					ChemistryStudent   					|
++-------------------------------------------------------+
+| - chemistryScores: int[5] 							|
++-------------------------------------------------------+
+| + ChemistryStudent(SID: int, chemistryScores int[]):	|
+| + getChemistryScores(): int[] 						|
+| + getScoreIndex(): int[] 								|
+| + setChemistryScores(chemistryScores: int[5]): void	|
++-------------------------------------------------------+
+
++-------------------------------------------------------------------+
+|   					ComputerScienceStudent   					|
++-------------------------------------------------------------------+
+| - computerScienceScores: int[5] 									|
++-------------------------------------------------------------------+
+| + ComputerScienceStudent(sid: int, computerScienceScores: int[5])	|
+| + getComputerScienceScores(): int[5] 								|
+| + getScoresIndex(): int[5] 										|
+| + setComputerScienceScores(computerScienceScores:	int[5]): void	|	
++-------------------------------------------------------------------+
+
++-----------------------------------------------+
+|   		  		ClassRoom			     	|
++-----------------------------------------------+
+| - chemClass: Student[] 						|
+| - csClass: Student[] 							|
+| - defaultClass: Student[] 					|
++-----------------------------------------------+
+| + ClassRoom()      							|
+| + ClassRoom(Student[], Student[], Student[])  |
+| + getChemClass(): Student[] 					|
+| + setChemClass(Student[]) 					|
+| + getCsClass(): Student[] 					|
+| + setCsClass(Student[])   					|
+| + getDefaultClass(): Student[]				|
+| + setDefaultClass(Student[]) 					|
++-----------------------------------------------+
+
++-----------------------------------+
+|      		  Statistics    		|
++-----------------------------------+
+| - lowScores: int[]  				|
+| - highScores: int[] 				|
+| - avgScores: float[]				|
++-----------------------------------+
+| + findLow(classroom:  Student[])	|
+| + printLow(): void  				|
+| + findHigh(classroom: Student[])
+| + printHigh(): void 				|
+| + findAvg(classroom:  Student[])	|
+| + printAvg(): void  				|
++-----------------------------------+
+
++---------------------------------------------------+
+|      				 	Util        				|
++---------------------------------------------------+
+| + readFile(filePath: String, classroom: Student[]	|
+| + printScores(classroom: Student[]): void 		|
++---------------------------------------------------+
+
++-------------------------------------------+
+|       		  Constants      	    	|
++-------------------------------------------+
+| - DEFAULT_FILE_PATH: String				|
+| - COMPUTER_SCIENCE_FILE_PATH: String		|
+| - CHEMISTRY_FILE_PATH: String				|
+| - SER_FILE_PATH: String     				|
+| - WROING_FILE_PATH: String     			|
++-------------------------------------------+
+| + getDefaultFilePath(): String			|
+| + getComputerScienceFilePath(): String	|
+| + getChemistryFilePath():	String			|
+| + getSerFilePath():String					|
+| + getWrongFilePath():String				|
++-------------------------------------------+
+
++-------------------------------+
+|		DriverStudentScores     |
++-------------------------------+
++-------------------------------+
+| +main(args: String[]): void	|
++-------------------------------+
+
+
+
+
+package: exception
++---------------------------------------------------------------+
+| 					StudentGradingException						|
++---------------------------------------------------------------+
+| + StudentGradingException(message: String, cause: Throwable)	|
+| - exceptionFileOutput(cause: Throwable						|
++---------------------------------------------------------------+
+
+
+
+
+package: util
++-------------------------------------------------------+
+|       			  StudentGrade      				|
++-------------------------------------------------------+
+|  - student : Student    								|
+|  - stats : Statistics   								|
++-------------------------------------------------------+
+| + StudentGrade(student: Student, stats: Statistics)	|
+| + getStudent(): Student 								|
+| + setStudent(student: Student): void 					|
+| + getStats(): Statistics 								|
+| + setStats(stats: Statistics): void 					|
++-------------------------------------------------------+
+
++-----------------------------------------------------------------------+
+|   						 	FileIO        							|
++-----------------------------------------------------------------------+
+| + serializeStudentGrade(classroom: Student[], filePath: String): void	|
+| + deserializeStudentGrade(filePath: String): Student[]				|
+| + serializeGradeBook(gradeBook: ClassRoom): void 						|
+| + deserializeGradeBook(serFilePath: String): ClassRoom 				|
++-----------------------------------------------------------------------+
+
+
+
+
+
+
+package: gradebook
++---------------------------------------------------+
+|    				 Chemistry  					|
++---------------------------------------------------+
+| - students: Student[40]							|
++---------------------------------------------------+
+| + addStudent(student: Student, index: int): void	|
+} + getStudent(index: int): Student					|
+| + getStudents(): Student[]						|
+| + setStudents(students: Student[]): void			|
++---------------------------------------------------+
+
++---------------------------------------------------+
+|    				ComputerScience  				|
++---------------------------------------------------+
+| - students: Student[40]							|
++---------------------------------------------------+
+| + addStudent(student: Student, index: int): void	|
+| + getStudent(index: int): Student					|
+| + getStudents(): Student[]						|
+| + setStudents(students: Student[]): void			|
++---------------------------------------------------+
+
+
+
+
+package: adapter
++---------------------------------------+
+|      	 (abstract) *StudentAPI*      	|
++---------------------------------------+
+| + printStudentStatistics(classroom)	|
+| + printScoreFromId(classroom, id)  	|
+| + printStudentStatistics(gradeBook)	|
++---------------------------------------+
+
++---------------------------------------+
+|      	 	  StudentAPIImpl      		|
++---------------------------------------+
+
+
+
+
+package: drivers
++---------------------------+
+|          Driver1       	|
++---------------------------+
+| + main(String[]): void 	|
++---------------------------+
+
++---------------------------+
+|          Driver2        	|
++---------------------------+
+| + main(String[]): void	|
++---------------------------+
+
++---------------------------+
+|          Driver3        	|
++---------------------------+
+| + main(String[]): void	|
++---------------------------+
+
++---------------------------+
+|      DriverGradeBook		|   
++---------------------------+
+| + main(String[]): void   	|
++---------------------------+
