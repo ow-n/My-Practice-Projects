@@ -2,6 +2,8 @@
 Collection of my programs.
 
 ## Java
+- Student Score Tracker
+
 - Coin Toss
 - Info Storage
 - Sales Data
