@@ -1,0 +1,197 @@
+          Lab 4 Ex 1 Part 2: Special Savings
++===================================================+
+
+                      Output 1
++---------------------------------------------------+
+[Checking if variables work]
+
+Saver 1's savings balance for month 0 is: $2000.00
+Saver 1's cash balance for month 0 is: $0.00
+Owen's savings balance for month 0 is: $3000.00
+Owen's cash balance for month 0 is: $2000.00
+Owen does not have enough funds to deposit: $4000.00
+
+Owen added $5000.05 to their cash amount.
+Owen's cash balance for month 0 is: $7000.05
+Owen deposited $6000.00 to their savings account.
+Owen's savings balance for month 0 is: $9000.00
+Owen's cash balance for month 0 is: $1000.05
+
+[Checking if other class methods work]
+
+Owen deposited $999.99 to their savings account.
+
+We will now attempt to apply Special APR to saver2:
+Owen's savings balance does not meet the minimum $10k requirement ($9999.99 / $10000.00)
+Do you wish to apply the regular interest rate instead ('y' - yes, anything else for no): n
+Interest has not been applied for month 1.
+Owen's savings balance for month 0 is: $9999.99
+Owen's cash balance for month 0 is: $0.06
+
+We will now attempt to apply Special APR to saver2:
+Owen's savings balance does not meet the minimum $10k requirement ($9999.99 / $10000.00)
+Do you wish to apply the regular interest rate instead ('y' - yes, anything else for no): y
+Regular interest rates has been applied for month 1.
+Owen's savings balance for month 1 is: $10033.32
+Owen's cash balance for month 1 is: $0.06
+
+Now we have enough for the Special Interest Rate.
+
+We will now attempt to apply Special APR to saver2 again:
+Special interest rate successfully applied.
+Owen's monthly interest of $83.61 was added for month 2.
+Owen's savings balance for month 2 is: $10116.93
+
+Owen withdrew $116.94
+Owen's savings balance for month 2 is: $9999.99
+Owen's savings balance does not meet the minimum $10k requirement ($9999.99 / $10000.00)
+Do you wish to apply the regular interest rate instead ('y' - yes, anything else for no): y
+Regular interest rates has been applied for month 3.
+Owen's savings balance for month 3 is: $10033.32
+
+[Checking if Savings Accounts can interact with each other]
+We added a new feature: Transfering Balances!
+
+Saver 1's variables should be unaffected:
+Saver 1's savings balance for month 0 is: $2000.00
+Owen transfered $8000.00 to Saver 1.
+Saver 1's savings balance for month 0 is: $10000.00
+Owen's savings balance for month 3 is: $2033.32
+
+Saver 1 now has enough savings balance.
+
+We will now attempt to apply Special APR to saver1:
+Special interest rate successfully applied.
+Saver 1's savings balance for month 1 is: $10083.33
+
+They will try to transfer their max savings balance + 0.01:
+Saver 1 has insufficient funds. Available funds: $10083.33.
+
+They will now transfer their max savings balance
+Owen's savings balance for month 3 is: $12116.66
+Saver 1's savings balance for month 1 is: $0.00
+
+
+          Output 2  - Different objects & 0s
++---------------------------------------------------+
+[Checking if variables work]
+
+Nemo's savings balance for month 0 is: $0.00
+Nemo's cash balance for month 0 is: $10000.00
+Saver 2's savings balance for month 0 is: $0.00
+Saver 2's cash balance for month 0 is: $0.00
+Saver 2 does not have enough funds to deposit: $10000.00
+
+Saver 2 added $10000.00 to their cash amount.
+Saver 2's cash balance for month 0 is: $10000.00
+Saver 2 deposited $9999.99 to their savings account.
+Saver 2's savings balance for month 0 is: $9999.99
+Saver 2's cash balance for month 0 is: $0.01
+
+[Checking if other class methods work]
+
+Saver 2 deposited $0.01 to their savings account.
+
+Now we have enough for the Special Interest Rate.
+
+We will now attempt to apply Special APR to saver2 again:
+Special interest rate successfully applied.
+Saver 2's monthly interest of $83.33 was added for month 1.
+Saver 2's savings balance for month 1 is: $10083.33
+
+Saver 2 withdrew $83.34
+Saver 2's savings balance for month 1 is: $9999.99
+Saver 2's savings balance does not meet the minimum $10k requirement ($9999.99 / $10000.00)
+Do you wish to apply the regular interest rate instead ('y' - yes, anything else for no): y
+Regular interest rates has been applied for month 2.
+Saver 2's savings balance for month 2 is: $426666.24
+
+[Checking if Savings Accounts can interact with each other]
+We added a new feature: Transfering Balances!
+
+Saver 1's variables should be unaffected:
+Nemo's savings balance for month 0 is: $0.00
+Saver 2 transfered $10000.00 to Nemo.
+Nemo's savings balance for month 0 is: $10000.00
+Saver 2's savings balance for month 2 is: $416666.24
+
+Saver 1 now has enough savings balance.
+
+We will now attempt to apply Special APR to saver1:
+Special interest rate successfully applied.
+Nemo's savings balance for month 1 is: $10083.33
+
+They will try to transfer their max savings balance + 0.01:
+Nemo has insufficient funds. Available funds: $10083.33.
+
+They will now transfer their max savings balance
+Saver 2's savings balance for month 2 is: $426749.57
+Nemo's savings balance for month 1 is: $0.00
+
+
+
+             Output 3 - Negative Balances
++---------------------------------------------------+
+[Checking if variables work]
+
+Saver 1's savings balance for month 0 is: $-2000.00
+Saver 1's cash balance for month 0 is: $0.00
+Owen's savings balance for month 0 is: $-3000.00
+Owen's cash balance for month 0 is: $-2000.00
+Owen does not have enough funds to deposit: $4000.00
+
+Owen added $15000.00 to their cash amount.
+Owen's cash balance for month 0 is: $13000.00
+Owen deposited $12000.00 to their savings account.
+Owen's savings balance for month 0 is: $9000.00
+Owen's cash balance for month 0 is: $1000.00
+
+[Checking if other class methods work]
+
+Owen deposited $999.99 to their savings account.
+
+We will now attempt to apply Special APR to saver2:
+Owen's savings balance does not meet the minimum $10k requirement ($9999.99 / $10000.00)
+Do you wish to apply the regular interest rate instead ('y' - yes, anything else for no): y
+Regular interest rates has been applied for month 1.
+Owen's savings balance for month 1 is: $10033.32
+Owen's cash balance for month 1 is: $0.01
+
+Now we have enough for the Special Interest Rate.
+
+We will now attempt to apply Special APR to saver2 again:
+Special interest rate successfully applied.
+Owen's monthly interest of $83.61 was added for month 2.
+Owen's savings balance for month 2 is: $10116.93
+
+Owen withdrew $116.94
+Owen's savings balance for month 2 is: $9999.99
+Owen's savings balance does not meet the minimum $10k requirement ($9999.99 / $10000.00)
+Do you wish to apply the regular interest rate instead ('y' - yes, anything else for no): y
+Regular interest rates has been applied for month 3.
+Owen's savings balance for month 3 is: $10033.32
+
+[Checking if Savings Accounts can interact with each other]
+We added a new feature: Transfering Balances!
+
+Saver 1's variables should be unaffected:
+Saver 1's savings balance for month 0 is: $-2000.00
+Owen transfered $8000.00 to Saver 1.
+Saver 1's savings balance for month 0 is: $6000.00
+Owen's savings balance for month 3 is: $2033.32
+
+Saver 1 now has enough savings balance.
+
+We will now attempt to apply Special APR to saver1:
+Saver 1's savings balance does not meet the minimum $10k requirement ($6000.00 / $10000.00)
+Do you wish to apply the regular interest rate instead ('y' - yes, anything else for no): n
+Interest has not been applied for month 1.
+Saver 1's savings balance for month 0 is: $6000.00
+
+They will try to transfer their max savings balance + 0.01:
+Saver 1 has insufficient funds. Available funds: $6000.00.
+
+They will now transfer their max savings balance
+Owen's savings balance for month 3 is: $8033.32
+Saver 1's savings balance for month 0 is: $0.00
+

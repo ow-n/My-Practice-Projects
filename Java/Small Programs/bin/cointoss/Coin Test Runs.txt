@@ -1,0 +1,19 @@
+Lab 2 - Part 2: Coin
+=====================================
+
+Output #1
+------------------------------------
+The coin flipped heads 8 time(s).
+The coin flipped tails 12 time(s).
+
+
+Output #2
+------------------------------------
+The coin flipped heads 17 time(s).
+The coin flipped tails 3 time(s).
+
+
+Output #3
+------------------------------------
+The coin flipped heads 11 time(s).
+The coin flipped tails 9 time(s).

@@ -1,0 +1,109 @@
+    Lab 2 - Part 1: Personal Info
++===================================+
+
+		  Output #1
++----------------------------------+
+Enter Name: Ana Amari (أنا عماري)
+Enter Age (must be an integer): 60
+Enter Gender: Female
+Enter Nationality: Egyptian
+
+Fill out next person's info.
+Enter Name: Bastion
+Enter Age (must be an integer): 30
+Enter Gender: <Not Applicable>
+Enter Nationality: Omnic
+
+Fill out next person's info.
+Enter Name: Cole Cassidy
+Enter Age (must be an integer): 37
+Enter Gender: Male
+Enter Nationality: American
+
+Person 1's name is: Ana Amari (??? ?????)
+Person 1's age is: 60
+Person 1's gender is: Female
+Person 1's nationality is: Egyptian
+
+Person 2's name is: Bastion
+Person 2's age is: 30
+Person 2's gender is: <Not Applicable>
+Person 2's nationality is: Omnic
+
+Person 3's name is: Cole Cassidy
+Person 3's age is: 37
+Person 3's gender is: Male
+Person 3's nationality is: American
+ 
+
+
+		  Output #2
++----------------------------------+
+Enter Name: Mei-Ling Zhou (周美灵)
+Enter Age (must be an integer): 31
+Enter Gender: Female
+Enter Nationality: Chinese
+
+Fill out next person's info.
+Enter Name: Amélie Lacroix (née Guillard)
+Enter Age (must be an integer): 33
+Enter Gender: Female
+Enter Nationality: French
+
+Fill out next person's info.
+Enter Name: Fareeha Amari (فاريها عماري)
+Enter Age (must be an integer): 32
+Enter Gender: Female
+Enter Nationality: Egyptian
+
+Person 1's name is: Mei-Ling Zhou (???)
+Person 1's age is: 31
+Person 1's gender is: Female
+Person 1's nationality is: Chinese
+
+Person 2's name is: Am lie Lacroix (n e Guillard)
+Person 2's age is: 33
+Person 2's gender is: Female
+Person 2's nationality is: French
+
+Person 3's name is: Fareeha Amari (?????? ?????)
+Person 3's age is: 32
+Person 3's gender is: Female
+Person 3's nationality is: Egyptian
+ 
+
+
+
+		  Output #3
++----------------------------------+
+Enter Name: 1
+Enter Age (must be an integer): 2
+Enter Gender: 3
+Enter Nationality: 45
+
+Fill out next person's info.
+Enter Name: 100.100
+Enter Age (must be an integer): 100
+Enter Gender: 0@#)298302o#{
+Enter Nationality: @#l;23o2p#O
+
+Fill out next person's info.
+Enter Name: ./|]\{
+Enter Age (must be an integer): 1
+Enter Gender: }{]"]{}:";
+Enter Nationality: :"}{';}{';
+
+Person 1's name is: 1
+Person 1's age is: 2
+Person 1's gender is: 3
+Person 1's nationality is: 45
+
+Person 2's name is: 100.100
+Person 2's age is: 100
+Person 2's gender is: 0@#)298302o#{
+Person 2's nationality is: @#l;23o2p#O
+
+Person 3's name is: ./|]\{
+Person 3's age is: 1
+Person 3's gender is: }{]"]{}:";
+Person 3's nationality is: :"}{';}{';

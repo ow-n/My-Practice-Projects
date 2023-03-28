@@ -1,0 +1,83 @@
+CruiseShip extends Ship.
+CargoShip extends Ship.
++-----------------------------------+
+|                Ship              	|
++-----------------------------------+
+| - weight: double              	|
+| - maxPassangers: int        	|
+| - color: String				|
+| - isSailing: boolean			|
++-----------------------------------+
+| # Ship()     				|
+| # Ship(double, int, String		|
+|						|
+| # getWeight(): double 		|
+| # setWeight(double) 			|
+| # getMaxPassengers(): int 		|
+| # setMaxPassengers(int) 		|
+| # getColor(): String 			|
+| # setColor(String) 			|
+| # isSailing(): boolean 		|
+| # setSailing(boolean)		 	|
+|						|
+| # sails(): void 			|
+| # docks(): void 			|	
++-----------------------------------+
+
++-----------------------------------------+
+|                CruiseShip			|
++-----------------------------------------+
+| - stores: int					|
++-----------------------------------------+
+| # CruiseShip() 					|
+|							|
+| # getNumRooms(): int 				|
+| # setNumRooms(int) 				|
+|							|
+| # sails(): void 				|
+| # docks(): void 				|	
++-----------------------------------------+
+
++-----------------------------------+
+|             CargoShip       	|
++-----------------------------------+
+| - isCrane: boolean			|
++-----------------------------------+
+| # CargoShip() 				|
+|						|
+| # getCargoCapacity(): double	|
+| # setCargoCapacity(double) 		|
+| # hasCrane(): boolean 		|
+| # setCrane(boolean) 			|
+|						|
+| # sails(): void				|
+| # docks(): void 			|	
++-----------------------------------+
+
++-----------------------------------+
+|              Driver       		|
++-----------------------------------+
+|						|
++-----------------------------------+
+| + main(args: String[]); void	|
++-----------------------------------+
+
++-----------------------------------+
+|           UserInterface       	|
++-----------------------------------+
+| - input: Scanner                 	|
+| - numShips: int              	|
+| - validInput: boolean       	|
+| - shipType: int               	|
+| - i: int            			|
+| # fleet: Ship[]           		|
++-----------------------------------+
+| # getFleet(): Ship[]              |
+| # setFleet(Ship[]): void          |
+|						|
+| # howManyShips(): void            |
+| # createShips(): void             |
+| - chooseShip(int): void           |
+| # listFleet(): void               |
+| # closeScanner(): void            |	
++-----------------------------------+

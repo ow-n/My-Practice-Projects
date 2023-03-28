@@ -1,0 +1,55 @@
++-----------------------------+
+|	 	Driver 		|
++-----------------------------+
+| + main(args: String[])	|
++-----------------------------+
+
++-----------------------------+
+| 		 FileIO		|
++-----------------------------+
+| - fName: String 		|
+| - DEBUG: boolean		|
++-----------------------------+
+| + FileIO(String)  		|
+| + readData(): Franchise 	|
+| + buildStore(): int		|
++-----------------------------+
+
++-----------------------------------+
+| 		  Franchise 		|
++-----------------------------------+
+| - stores: Store[] 			|
++-----------------------------------+
+| + Franchise(int): 			|
+| + getStores(int): Store		|
+| + setStores(Store, int): void	|
+| + getStores(): int			|
++-----------------------------------+
+
++-----------------------------------------------+
+|        		    Store            		|
++-----------------------------------------------+
+| - salesByWeek: float[][]				|
+| # totalSalesForWeek: float[5] 			|
+| # avgSalesForWeek: float[5] 			|
+| # totalSalesForAllWeeks: float 			|
+| # averageWeeklySales: float 			|
+| # weekWithHighestSaleAmt: int 			|
+| # weekWithLowestSaleAmt: int 			|
++-----------------------------------------------+
+| + Store()               	 			|
+|								|
+| + printData(): void      				|
+| + setSaleForWeekdayIntersection(week: int, 	|
+|	ay: int, sale: float): void 			|
+| + getSalesForEntireWeek(week: int): float[] 	|
+| + getSaleForWeekdayIntersection(week: int,	|
+|   	say: int): float 					|
+|								|
+| + getSalesForWeek(): float[] 			|
+| + getAvgSalesEachWeek(): float[] 			|
+| + getTotalSalesForAllWeeks(): float		|
+| + getAverageWeeklySales(): float 			|
+| + getWeekWithHighestSaleAmt(): int 		|
+| + getWeekWithLowestSaleAmt(): int 		|
++-----------------------------------------------+

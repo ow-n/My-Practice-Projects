@@ -1,0 +1,82 @@
+	  Lab 2 - Part 2: Coin
++==================================+
+
+		 Output #1
++----------------------------------+
+Toss 1: tails
+Toss 2: heads
+Toss 3: tails
+Toss 4: heads
+Toss 5: heads
+Toss 6: heads
+Toss 7: heads
+Toss 8: heads
+Toss 9: heads
+Toss 10: heads
+Toss 11: heads
+Toss 12: heads
+Toss 13: tails
+Toss 14: tails
+Toss 15: heads
+Toss 16: tails
+Toss 17: tails
+Toss 18: tails
+Toss 19: tails
+Toss 20: tails
+
+The coin flipped heads 11 time(s).
+The coin flipped tails 9 time(s).
+
+
+	 	 Output #2
++----------------------------------+
+Toss 1: tails
+Toss 2: heads
+Toss 3: tails
+Toss 4: heads
+Toss 5: tails
+Toss 6: tails
+Toss 7: heads
+Toss 8: tails
+Toss 9: tails
+Toss 10: tails
+Toss 11: tails
+Toss 12: tails
+Toss 13: heads
+Toss 14: tails
+Toss 15: heads
+Toss 16: heads
+Toss 17: heads
+Toss 18: tails
+Toss 19: tails
+Toss 20: tails
+
+The coin flipped heads 7 time(s).
+The coin flipped tails 13 time(s).
+
+
+		 Output #3
++----------------------------------+
+Toss 1: heads
+Toss 2: heads
+Toss 3: heads
+Toss 4: tails
+Toss 5: heads
+Toss 6: heads
+Toss 7: heads
+Toss 8: heads
+Toss 9: tails
+Toss 10: heads
+Toss 11: heads
+Toss 12: heads
+Toss 13: tails
+Toss 14: heads
+Toss 15: heads
+Toss 16: heads
+Toss 17: tails
+Toss 18: heads
+Toss 19: tails
+Toss 20: heads
+
+The coin flipped heads 15 time(s).
+The coin flipped tails 5 time(s).

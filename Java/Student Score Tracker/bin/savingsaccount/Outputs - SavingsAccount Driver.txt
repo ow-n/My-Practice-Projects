@@ -1,0 +1,52 @@
+        Lab 4 Ex 1 Part 1: Savings Accounts
++==================================================+
+
+                     Output 1
++--------------------------------------------------+
+The Annual Interest Rate has been set to 4%.
+Saver 1's monthly interest added for month 1.
+Saver 2's monthly interest added for month 1.
+
+Saver 1's savings balance for month 1 is: $2006.67
+Saver 2's savings balance for month 1 is: $3010.00
+
+The Annual Interest Rate has been set to 5%.
+Saver 1's monthly interest added for month 2.
+Saver 2's monthly interest added for month 2.
+
+Saver 1's savings balance for month 2 is: $2015.03
+Saver 2's savings balance for month 2 is: $3022.54
+
+
+                     Output 2
++--------------------------------------------------+
+The Annual Interest Rate has been set to 0%.
+Saver 1's monthly interest added for month 1.
+Saver 2's monthly interest added for month 1.
+
+Saver 1's savings balance for month 1 is: $0.00
+Saver 2's savings balance for month 1 is: $9999.99
+
+The Annual Interest Rate has been set to 500%.
+Saver 1's monthly interest added for month 2.
+Saver 2's monthly interest added for month 2.
+
+Saver 1's savings balance for month 2 is: $0.00
+Saver 2's savings balance for month 2 is: $14166.65
+
+
+                     Output 3
++--------------------------------------------------+
+The Annual Interest Rate has been set to -2%.
+Saver 1's monthly interest added for month 1.
+Saver 2's monthly interest added for month 1.
+
+Saver 1's savings balance for month 1 is: $-500.83
+Saver 2's savings balance for month 1 is: $499.17
+
+The Annual Interest Rate has been set to 5%.
+Saver 1's monthly interest added for month 2.
+Saver 2's monthly interest added for month 2.
+
+Saver 1's savings balance for month 2 is: $-498.75
+Saver 2's savings balance for month 2 is: $501.25

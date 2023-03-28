@@ -1,0 +1,115 @@
+      	     Lab 4 Ex 2: Ships
++===================================================+
+
+                      Output 1
++---------------------------------------------------+
+How many ships are in your fleet? 4
+You have declared 4 ships.
+
+Choose what kinds of ships you want in your fleet.
+Enter '1' for a default ship, '2' for a cruise ship, or '3' for a cargo ship.
+Ship 1: 1
+Ship 2: 2
+Ship 3: 3
+Ship 4: 2
+You have successfully created your 4 ships.
+
+You have 1 default ship(s), 2 cruise ship(s), and 1 cargo ship(s).
+
+The 1st fleet's weight is: 10 tonnes
+The 3rd fleet's color is: red
+
+The 2nd fleet's number of stores is: 20
+
+Ship 1:
+This ship went sailing.
+Ship 2:
+This cruise ship went sailing.
+Ship 3:
+This cargo ship went sailing.
+Ship 2:
+This cruise ship has docked.
+Is the 2nd ship out at sea?: false
+
+The max capacity of the 1st ship is: 15
+The max capacity of the 1st ship is now: 100
+
+
+
+              Output 2 - Invalid Inputs
++---------------------------------------------------+
+How many ships are in your fleet? a
+Invalid input. Enter a valid integer: -1
+Invalid input. Enter a positive integer: 1.1
+Invalid input. Enter a valid integer: 4
+You have declared 4 ships.
+
+Choose what kinds of ships you want in your fleet.
+Enter '1' for a default ship, '2' for a cruise ship, or '3' for a cargo ship.
+Ship 1: a
+Invalid input. Please enter 1, 2, or 3: -1
+Select an integer between 1 and 3: 1.1
+Invalid input. Please enter 1, 2, or 3: 4
+Select an integer between 1 and 3: 1
+Ship 2: 1
+Ship 3: 1
+Ship 4: 1
+You have successfully created your 4 ships.
+
+You have 4 default ship(s), 0 cruise ship(s), and 0 cargo ship(s).
+
+The 1st fleet's weight is: 10 tonnes
+The 3rd fleet's color is: brown
+Ship 1:
+This ship went sailing.
+Ship 2:
+This ship went sailing.
+Ship 3:
+This ship went sailing.
+Ship 2:
+This ship has docked.
+Is the 2nd ship out at sea?: false
+
+The max capacity of the 1st ship is: 15
+The max capacity of the 1st ship is now: 100
+
+
+
+       Output 3 - Calling different Parameters
++---------------------------------------------------+
+How many ships are in your fleet? 10
+You have declared 10 ships.
+
+Choose what kinds of ships you want in your fleet.
+Enter '1' for a default ship, '2' for a cruise ship, or '3' for a cargo ship.
+Ship 1: 3
+Ship 2: 2
+Ship 3: 1
+Ship 4: 2
+Ship 5: 3
+Ship 6: 2
+Ship 7: 1
+Ship 8: 2
+Ship 9: 3
+Ship 10: 2
+You have successfully created your 10 ships.
+
+You have 2 default ship(s), 5 cruise ship(s), and 3 cargo ship(s).
+
+The 2nd fleet's weight is: 20000 tonnes
+The 1st fleet's color is: red
+
+Does the 1st fleet have cranes: true
+
+Ship 1:
+This cargo ship went sailing.
+Ship 2:
+This cruise ship went sailing.
+Ship 3:
+This ship went sailing.
+Ship 2:
+This cruise ship has docked.
+Is the 2nd ship out at sea?: false
+
+The max capacity of the 1st ship is: 20
+The max capacity of the 1st ship is now: 100
