@@ -16,6 +16,8 @@
     &nbsp;
     <a href="https://github.com/ow-n/Practice-Projects/tree/main/C%2B%2B"><img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=#00599C" alt="C++"></a>
     &nbsp;
+    <a href="https://github.com/ow-n/Practice-Projects/tree/main/Assembly"><img src="https://img.shields.io/badge/Assembly-654FF0?style=for-the-badge&logo=assemblyscript&logoColor=white" alt="Assembly"></a>
+    &nbsp;
     <a href="https://github.com/ow-n/Practice-Projects"><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"></a>
   </div>
     
@@ -50,6 +52,9 @@ Other programs that use:
 <br><br><br>
 
 
+## <img src="icons/AssemblyScript.png" alt="Assembly" width="20" height="20"> Assembly Programs
+<br><br><br>
+
 
 <!-- CONTACT -->
 ## Contact
@@ -75,5 +80,7 @@ Other programs that use:
 [Java]: https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white
 [Cplusplus.link]: https://github.com/ow-n/Practice-Projects/tree/main/C%2B%2B
 [Cplusplus]: https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white
+[Assembly.link]: https://github.com/ow-n/Practice-Projects/tree/main/Assembly
+[Assembly]: https://img.shields.io/badge/Assembly-654FF0?style=for-the-badge&logo=generic&logoColor=white
 [HTML5.link]: https://github.com/ow-n/Practice-Projects
 [HTML5]: https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
