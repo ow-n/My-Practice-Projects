@@ -32,6 +32,7 @@
 
 
 ## <img src="icons/Java.svg" alt="Java" width="20" height="20"> Java Programs
+- Card Game
 - Student Scores
 
 Small Programs: ships / savingsaccount / salesdata / storinginfo / cointoss
@@ -52,8 +53,14 @@ Other programs that use:
 <br><br><br>
 
 
+## <img src="icons/Python.png" alt="Python" width="20" height="20"> Python Programs
+<br><br><br>
+
+
 ## <img src="icons/AssemblyScript.png" alt="Assembly" width="20" height="20"> Assembly Programs
 <br><br><br>
+
+
 
 
 <!-- CONTACT -->
