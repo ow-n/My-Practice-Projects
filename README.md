@@ -59,6 +59,7 @@ Other programs that use:
 
 ## <img src="icons/AssemblyScript.png" alt="Assembly" width="20" height="20"> Assembly Programs
 1) Intro to Mips
+- Dealing with Names and Age
 - Simple Addition
 <br><br><br>
 
