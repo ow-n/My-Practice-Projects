@@ -62,6 +62,8 @@ Other programs that use:
 - Plays Harry Potter Theme
 - Dealing with Names and Age
 - Simple Addition
+2) ASCII Conversion
+- Arithmetic / Vector Format / Place Value
 <br><br><br>
 
 
