@@ -33,6 +33,7 @@
 
 ## <img src="icons/Java.svg" alt="Java" width="20" height="20"> Java Programs
 - Card Game
+- Optical Barcode Scanner
 - Student Scores
 
 Small Programs: ships / savingsaccount / salesdata / storinginfo / cointoss
