@@ -54,10 +54,6 @@ Other programs that use:
 <br><br><br>
 
 
-## <img src="icons/Python.png" alt="Python" width="20" height="20"> Python Programs
-<br><br><br>
-
-
 ## <img src="icons/AssemblyScript.png" alt="Assembly" width="20" height="20"> Assembly Programs
 1) Intro to Mips
 - Plays Harry Potter Theme
@@ -65,6 +61,11 @@ Other programs that use:
 - Simple Addition
 2) ASCII Conversion
 - Arithmetic / Vector Format / Place Value
+- Masking / Procedures / Matrix
+<br><br><br>
+
+
+## <img src="icons/Python.png" alt="Python" width="20" height="20"> Python Programs
 <br><br><br>
 
 
