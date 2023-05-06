@@ -8,7 +8,7 @@
     <img src="icons/logo.png" alt="Logo" width="80" height="80">
   </div>
 
-  <h2 align="center">My Coding Journey</h3>
+  <h2 align="center">My Coding Journey</h2>
 
   <p align="center">
     Click to see the programs I built along the way 👇🏼
@@ -23,7 +23,7 @@
     &nbsp;
     <a href="https://github.com/ow-n/My-Practice-Projects/tree/main/Assembly"><img src="https://img.shields.io/badge/Assembly-654FF0?style=for-the-badge&logo=assemblyscript&logoColor=white" alt="Assembly"></a>
     &nbsp;
-    <a href="https://github.com/ow-n/My-Practice-Projects/tree/main#readme"><img src="https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML"></a>
+    <a href="https://github.com/ow-n/My-Practice-Projects/blob/main/README.md?plain=1"><img src="https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML"></a>
 
   </div>
     
