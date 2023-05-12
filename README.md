@@ -69,6 +69,7 @@ Other programs that use:
 2) ASCII Conversion
 - [Arithmetic / Vector Format / Place Value](https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/ASCII%20Conversion%20Arithmetic.asm)
 - [Masking / Procedures / Matrix](https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/ASCII%20Conversion%20Masking.asm)
+- [Matrix Summation using Loops](https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/Loop%20to%20Sum%20Matrix.asm)
 <br><br><br>
 
 
