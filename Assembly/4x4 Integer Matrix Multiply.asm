@@ -10,10 +10,14 @@ colon:			.asciiz			": "
 				.align 4		# ensures V is aligned to a word boundary
 M1_label:		.asciiz			"Printing M1 Matrix..."
 M2_label:		.asciiz			"Printing M2 Matrix..."
+MM_process:		.asciiz			"Multiplying M1 to M2..."
+MM_label:		.asciiz			"Printing MM Matrix..."
 				.align 4		# ensures V is aligned to a word boundary
 M1:				.space 64		# 4x4 Matrix with 64 bytes of memory
 				.align 4		# ensures V is aligned to a word boundary
 M2:				.space 64		# 4x4 Matrix with 64 bytes of memory
+				.align 4		# ensures V is aligned to a word boundary
+MM:				.space 64		# 4x4 Matrix with 64 bytes of memory
 # Variables for Debugging
 arrow:			.asciiz			" -> "
 print_sum:		.asciiz			"Sum: "
@@ -23,6 +27,8 @@ parity:			.asciiz			"Parity: "
 inside_M1: 		.asciiz			"(Inside make_matrix 1) "
 inside_M2: 		.asciiz			"(Inside make_matrix 2) "
 MTest:			.asciiz			"1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4"
+loop_j_fin:		.asciiz			"Loop j finished "
+loop_i_fin:		.asciiz			"Loop i finished "
  
 .text
 main:
@@ -290,7 +296,17 @@ print_M:
     	jal new_line
     	move $ra, $s0               # restore the return address from $s0
 		jr $ra 
-		
+
+	print_MM:
+		la $a0, MM_label      		# load address of M2_label
+    	syscall
+    	jal new_line
+		la $t5, MM					# load address of integer matrix M2 into $t5
+    	jal print_M_loop
+    	jal new_line
+    	move $ra, $s0               # restore the return address from $s0
+		jr $ra 
+
 		print_M_loop:
     		beq $s1, $t0, next_row		# if i == 4, go to next row
     		beq $s2, $t0, exit_loop		# if j == 4, exit
@@ -321,6 +337,88 @@ print_M:
 
 # ======================================================================= #
 
+multiply_matrix:
+	move $s0, $ra			# save the return address in $s0
+	li $v0, 4
+	la $a0, MM_process
+	syscall
+	jal new_line
+	la $s4, M1 				# load the base address of matrix M1 into $s4
+	la $s5, M2 				# load the base address of matrix M2 into $s5
+	la $s6, MM 				# load the base address of matrix MM into $s6
+
+	# Save Loop termination value (4) + Initialize loop variables
+	li $t1, 4 				# $t1 = 4 (row size/loop end)
+	li $s1, 0 				# i = 0; initialize 1st for loop
+	
+	L1: li $s2, 0 				# j = 0; restart 2nd for loop
+	L2: li $s3, 0 				# k = 0; restart 3rd for loop
+
+		# First Step: skip over the i “1D Arrays” / Rows, to get the one we want.
+		# So: multiply the index in the first dimension by the size of the row, 32.
+		# Since 4 is a power of 2, we can use a shift instead:
+		sll $t2, $s1, 2 		# $t2 = i * 2^2 (size of row of c)
+
+		# Add the second index to select the jth element of the desired row:
+		addu $t2, $t2, $s2 		# $t2 = i * size(row) + j
+
+		# Multiply $t2 by the size of matrix elements in bytes to turn sum into byte index.
+		# Since each element is 8 bytes for double precision, we can instead shift left by 2:
+		sll $t2, $t2, 2 		# $t2 = byte offset of [i][j]
+
+		# Add this sum to the base address of c, giving the address of c[i][j],
+		# and then load the double precision number c[i][j] into $f4:
+		addu $t2, $s6, $t2 		# $t2 = byte address of c[i][j]
+		lw $t3, 0($t2) 			# $t3 = 4 bytes of c[i][j]
+
+		# Repeat last 5 instructions to calculate address and load double precision number b[k][j].
+		L3: sll $t0, $s3, 2 		# $t0 = k * 2^2 (size of row of b)
+			addu $t0, $t0, $s2		# $t0 = k * size(row) + j
+			sll $t0, $t0, 2 		# $t0 = byte offset of [k][j]
+			addu $t0, $s5, $t0 		# $t0 = byte address of b[k][j]
+			lw $t4, 0($t0) 			# $t4 = 4 bytes of b[k][j]
+
+			# Repeat again to calculate the address and load double precision number a[i][k].
+			sll $t0, $s1, 2 		# $t0 = i * 4 (size of row of a)
+			addu $t0, $t0, $s3 		# $t0 = i * size(row) + k
+			sll $t0, $t0, 2 		# $t0 = byte offset of [i][k]
+			addu $t0, $t0, $s4		# $t0 = byte address of a[i][k]
+			lw $t5, 0($t0) 			# $t5 = 4 bytes of a[i][k]
+
+			# Integer Operations after loading all data: multiply elements of a and b
+			# located in registers $f18 and $f16, and then accumulate the sum in $f4.
+			mul $t4, $t5, $t4 		# $t4 = a[i][k] * b[k][j]
+			add $t3, $t3, $t4 		# $t3 = c[i][j] + a[i][k] * b[k][j]
+
+
+			# Store sum accumulated in $f4 into c[i][j] ($t2)
+			# Increment index k, loop back if not 4, if is then end inner loop
+			addiu $s3, $s3, 1 		# $k = k + 1
+			bne $s3, $t1, L3 		# if (k != 32) go to L3
+			sw $t3, 0($t2) 			# c[i][j] = $t3
+
+			# Increment index i and j for middle and outerloop until 4
+			addiu $s2, $s2, 1 		# $j = j + 1
+					# Debugging - Prints everytime j loop
+					li $v0, 4
+					la $a0, loop_j_fin
+					syscall 
+			bne $s2, $t1, L2 		# if (j != 4) go to L2
+			addiu $s1, $s1, 1 		# $i = i + 1
+					# Debugging - Prints everytime i loop
+					li $v0, 4
+					la $a0, loop_i_fin
+					syscall
+					jal new_line 
+			bne $s1, $t1, L1 		# if (i != 4) go to L1
+			
+			jal new_line
+ 			add $t6, $t6, 1			# so that print_matrix know to print the 3rd matrix
+ 			move $ra, $s0			# restores return address back to $ra
+			jr $ra
+
+# ======================================================================= #
+
 exit_program:
 	li $v0, 10				# [System]: Exit
 	syscall
@@ -340,3 +438,99 @@ exit_program:
 	exit_loop:
 		jr $ra					# Return from subroutine (using $ra)
 
+
+
+
+# =========================={ Notes }========================== #
+# $s0 = return address, nested loop 1
+# $s1 = i (rows), $s2 = j (columns)
+# $s3 = termination value
+# $s4 = M1, $s5 = M2, $s6 = MM
+# $s7 = return address, nested loop 2
+
+# $t6 = matrix number (0 -> 1 -> 2 -> ...)
+# $t7 = branch condition checker
+
+
+# ======================={ Output One }======================= #
+# Input 4x4 Matrix 1
+# Row 1: 1 2 3 4 -> 1 2 3 4 
+# Row 2: 1 2 3 4 -> 1 2 3 4 
+# Row 3: 1 2 3 4 -> 1 2 3 4 
+# Row 4: 1 2 3 4 -> 1 2 3 4 
+# Sum: 1 -> 3 -> 6 -> 10 -> 11 -> 13 -> 16 -> 20 -> 21 -> 23 -> 26 -> 30 -> 31 -> 33 -> 36 -> 40 -> 40
+# Parity: 0
+# 
+# Printing M1 Matrix...
+# 1 2 3 4 
+# 1 2 3 4 
+# 1 2 3 4 
+# 1 2 3 4 
+# 
+# Input 4x4 Matrix 2
+# Row 1: 1 2 3 4 -> 1 2 3 4 
+# Row 2: 1 2 3 4 -> 1 2 3 4 
+# Row 3: 1 2 3 4 -> 1 2 3 4 
+# Row 4: 1 2 3 4 -> 1 2 3 4 
+# Sum: 1 -> 3 -> 6 -> 10 -> 11 -> 13 -> 16 -> 20 -> 21 -> 23 -> 26 -> 30 -> 31 -> 33 -> 36 -> 40 -> 40
+# Parity: 0
+# 
+# Printing M2 Matrix...
+# 1 2 3 4 
+# 1 2 3 4 
+# 1 2 3 4 
+# 1 2 3 4 
+# 
+# Multiplying M1 to M2...
+# Loop j finished Loop j finished Loop j finished Loop j finished Loop i finished 
+# Loop j finished Loop j finished Loop j finished Loop j finished Loop i finished 
+# Loop j finished Loop j finished Loop j finished Loop j finished Loop i finished 
+# Loop j finished Loop j finished Loop j finished Loop j finished Loop i finished 
+# 
+# Printing MM Matrix...
+# 10 20 30 40 
+# 10 20 30 40 
+# 10 20 30 40 
+# 10 20 30 40
+
+
+# ======================={ Output Two }======================= #
+# Input 4x4 Matrix 1
+# Row 1: 1231231 -> 1 3 2 1 
+# Row 2: 2312312 -> 2 1 3 2 
+# Row 3: 3123123 -> 3 2 1 3 
+# Row 4: 1212312 -> 1 1 3 2 
+# Sum: 1 -> 4 -> 6 -> 7 -> 9 -> 10 -> 13 -> 15 -> 18 -> 20 -> 21 -> 24 -> 25 -> 26 -> 29 -> 31 -> 31
+# Parity: 1
+# 
+# Printing M1 Matrix...
+# 1 3 2 1 
+# 2 1 3 2 
+# 3 2 1 3 
+# 1 1 3 2 
+# 
+# Input 4x4 Matrix 2
+# Row 1: 5555555 -> 5 5 5 5 
+# Row 2: 5555555 -> 5 5 5 5 
+# Row 3:         -> 0 0 0 0 
+# Row 4: 0000000 -> 0 0 0 0 
+# Sum: 5 -> 10 -> 15 -> 20 -> 25 -> 30 -> 35 -> 40 -> 40 -> 40 -> 40 -> 40 -> 40 -> 40 -> 40 -> 40 -> 40
+# Parity: 0
+# 
+# Printing M2 Matrix...
+# 5 5 5 5 
+# 5 5 5 5 
+# 0 0 0 0 
+# 0 0 0 0 
+# 
+# Multiplying M1 to M2...
+# Loop j finished Loop j finished Loop j finished Loop j finished Loop i finished 
+# Loop j finished Loop j finished Loop j finished Loop j finished Loop i finished 
+# Loop j finished Loop j finished Loop j finished Loop j finished Loop i finished 
+# Loop j finished Loop j finished Loop j finished Loop j finished Loop i finished 
+# 
+# Printing MM Matrix...
+# 20 20 20 20 
+# 15 15 15 15 
+# 25 25 25 25 
+# 10 10 10 10 
