@@ -74,6 +74,7 @@ Other programs that use:
 - [4x4 Integer Matrix Multiply](https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/4x4%20Integer%20Matrix%20Multiply.asm)
 4) C Code Translation
 - [32x32 Matrix Multiply](https://github.com/ow-n/My-Practice-Projects/blob/71b7e85775b96ffda69d4c9848044514adf82eae/Assembly/32x32%20Floating%20Point%20Matrix%20Multiply.asm)
+- [Creating Loops](https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/Creating%20Loops.asm)
 <br><br><br>
 
 
