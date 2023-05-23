@@ -8,7 +8,7 @@
     <img src="icons/logo.png" alt="Logo" width="80" height="80">
   </div>
 
-  <h2 align="center">My Coding Journey</h2>
+  <h2 align="center">My Coding Journey</h3>
 
   <p align="center">
     Click to see the programs I built along the way 👇🏼
@@ -37,48 +37,66 @@
 ---
 
 
+<!-- JAVA -->
 ## <img src="icons/Java.svg" alt="Java" width="20" height="20"> Java Programs
-- [Card Game](https://github.com/ow-n/My-Practice-Projects/tree/main/Java/Card%20Game)
-- [GUICards](https://github.com/ow-n/My-Practice-Projects/tree/main/Java/GUICards)
-- [Optical Barcode Scanner](https://github.com/ow-n/My-Practice-Projects/tree/main/Java/Optical%20Barcode%20Scanner)
-- [Student Scores](https://github.com/ow-n/My-Practice-Projects/tree/main/Java/Student%20Score%20Tracker)
+<ul>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/tree/main/Java/Card%20Game">Card Game</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/tree/main/Java/GUICards">GUICards</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/tree/main/Java/Optical%20Barcode%20Scanner">Optical Barcode Scanner</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/tree/main/Java/Student%20Score%20Tracker">Student Scores</a></li>
+</ul>
 
-Small Programs: [ships](https://github.com/ow-n/My-Practice-Projects/tree/main/Java/Small%20Programs/src/ships) / [savingsaccount](https://github.com/ow-n/My-Practice-Projects/tree/main/Java/Small%20Programs/src/savingsaccount) / [salesdata](https://github.com/ow-n/My-Practice-Projects/tree/main/Java/Small%20Programs/src/salesdata) / [storinginfo](https://github.com/ow-n/My-Practice-Projects/tree/main/Java/Small%20Programs/src/personalinfo) / [cointoss](https://github.com/ow-n/My-Practice-Projects/tree/main/Java/Small%20Programs/src/cointoss)
+<p>Small Programs: <a href="https://github.com/ow-n/My-Practice-Projects/tree/main/Java/Small%20Programs/src/ships">Ships</a> / <a href="https://github.com/ow-n/My-Practice-Projects/tree/main/Java/Small%20Programs/src/savingsaccount">Savings Account</a> / <a href="https://github.com/ow-n/My-Practice-Projects/tree/main/Java/Small%20Programs/src/salesdata">Sales Data</a> / <a href="https://github.com/ow-n/My-Practice-Projects/tree/main/Java/Small%20Programs/src/personalinfo">Storing Info</a> / <a href="https://github.com/ow-n/My-Practice-Projects/tree/main/Java/Small%20Programs/src/cointoss">Coin Toss</a></p>
 <br><br><br>
 
 
+<!-- C++ -->
 ## <img src="icons/C++.png" alt="C++" width="20" height="20"> C++ Programs
-Programming Challenges:
-- [colorMixer](https://github.com/ow-n/My-Practice-Projects/blob/main/C%2B%2B/Programming%20Challenges/colorMixer.cpp)
-- [daysInAMonth](https://github.com/ow-n/My-Practice-Projects/blob/main/C%2B%2B/Programming%20Challenges/daysInAMonth.cpp)
-- [numberAnalysisIO](https://github.com/ow-n/My-Practice-Projects/blob/main/C%2B%2B/Programming%20Challenges/numberAnalysisIO.cpp)
-- [numberGuessingGame](https://github.com/ow-n/My-Practice-Projects/blob/main/C%2B%2B/Programming%20Challenges/numberGuessingGame.cpp)
-- [printingASCIICodes](https://github.com/ow-n/My-Practice-Projects/blob/main/C%2B%2B/Programming%20Challenges/printingASCIICodes.cpp)
-- [rockPaperScissors](https://github.com/ow-n/My-Practice-Projects/blob/main/C%2B%2B/Programming%20Challenges/rockPaperScissors.cpp)
+<p>Programming Challenges:</p>
+<ul style="margin-top: -10px;">
+<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/C%2B%2B/Programming%20Challenges/colorMixer.cpp">Color Mixer</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/C%2B%2B/Programming%20Challenges/daysInAMonth.cpp">Days In A Month</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/C%2B%2B/Programming%20Challenges/numberAnalysisIO.cpp">Number Analysis IO</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/C%2B%2B/Programming%20Challenges/numberGuessingGame.cpp">Number Guessing Game</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/C%2B%2B/Programming%20Challenges/printingASCIICodes.cpp">Printing ASCII Codes</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/C%2B%2B/Programming%20Challenges/rockPaperScissors.cpp">Rock Paper Scissors</a></li>
+</ul>
 
-Other programs that use:
-- [Functions](https://github.com/ow-n/My-Practice-Projects/blob/main/C%2B%2B/Functions/scope.cpp) / [Loops](https://github.com/ow-n/My-Practice-Projects/blob/main/C%2B%2B/Loops%20%26%20Files/nested.cpp) / [Files](https://github.com/ow-n/My-Practice-Projects/blob/main/C%2B%2B/Loops%20%26%20Files/nested.cpp) / [Arrays](https://github.com/ow-n/My-Practice-Projects/blob/main/C%2B%2B/Arrays/student.cpp)
+<p>Other programs that use:</p>
+<ul style="margin-top: -10px;">
+<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/C%2B%2B/Functions/scope.cpp">Functions</a> / <a href="https://github.com/ow-n/My-Practice-Projects/blob/main/C%2B%2B/Loops%20%26%20Files/nested.cpp">Loops</a> / <a href="https://github.com/ow-n/My-Practice-Projects/blob/main/C%2B%2B/Loops%20%26%20Files/nested.cpp">Files</a> / <a href="https://github.com/ow-n/My-Practice-Projects/blob/main/C%2B%2B/Arrays/student.cpp">Arrays</a></li>
+</ul>
 <br><br><br>
 
 
+<!-- ASSEMBLY -->
 ## <img src="icons/AssemblyScript.png" alt="Assembly" width="20" height="20"> Assembly Programs
-1) Intro to Mips
-- [Plays Harry Potter Theme](https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/Plays%20Song%20-%20Harry%20Potter%20Theme.asm)
-- [Dealing with Names and Age](https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/Dealing%20with%20Names%20and%20Age.asm)
-- [Simple Addition](https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/Simple%20Addition.asm)
-2) ASCII Conversion
-- [Arithmetic / Vector Format / Place Value](https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/ASCII%20Conversion%20Arithmetic.asm)
-- [Masking / Procedures / Matrix](https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/ASCII%20Conversion%20Masking.asm)
-- [Matrix Summation using Loops](https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/Loop%20to%20Sum%20Matrix.asm)
-3) Matrix Multiply
-- [4x4 Integer Matrix Multiply](https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/4x4%20Integer%20Matrix%20Multiply.asm)
-4) C Code Translation
-- [32x32 Matrix Multiply](https://github.com/ow-n/My-Practice-Projects/blob/71b7e85775b96ffda69d4c9848044514adf82eae/Assembly/32x32%20Floating%20Point%20Matrix%20Multiply.asm)
-- [Creating Loops](https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/Creating%20Loops.asm)
-- [Creating Arrays](https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/Creating%20Arrays.asm)
+<p style="margin-left: 0;">1) Introduction to MIPS</p>
+<ul style="margin-top: -10px;">
+<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/Plays%20Song%20-%20Harry%20Potter%20Theme.asm">Plays Harry Potter Theme</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/Dealing%20with%20Names%20and%20Age.asm">Dealing with Names and Age</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/Simple%20Addition.asm">Simple Addition</a></li>
+</ul>
+<p style="margin-left: 0;">2) ASCII Conversion</p>
+<ul style="margin-top: -10px;">
+<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/ASCII%20Conversion%20Arithmetic.asm">Arithmetic / Vector Format / Place Value</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/ASCII%20Conversion%20Masking.asm">Masking / Procedures / Matrix</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/Loop%20to%20Sum%20Matrix.asm">Matrix Summation using Loops</a></li>
+</ul>
+<p style="margin-left: 0;">3) Matrix Multiply</p>
+<ul style="margin-top: -10px;">
+<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/4x4%20Integer%20Matrix%20Multiply.asm">4x4 Integer Matrix Multiply</a></li>
+</ul>
+<p style="margin-left: 0;">C Code Translations</p>
+<ul style="margin-top: -10px;">
+<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/71b7e85775b96ffda69d4c9848044514adf82eae/Assembly/32x32%20Floating%20Point%20Matrix%20Multiply.asm">32x32 Matrix Multiply</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/Creating%20Loops.asm">Creating Loops</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/Creating%20Arrays.asm">Creating Arrays</a></li>
+</ul>
 <br><br><br>
 
 
+<!-- PYTHON -->
 ## <img src="icons/Python.png" alt="Python" width="20" height="20"> Python Programs
 - [Math Notation Fix from PPT](https://github.com/ow-n/My-Practice-Projects/blob/main/Python/Math%20PPT%20to%20MD%20Translate/Discrete%20Notation%20Change.py)
 <br><br><br>
