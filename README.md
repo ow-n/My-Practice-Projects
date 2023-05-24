@@ -99,7 +99,7 @@
 <!-- PYTHON -->
 ## <img src="icons/Python.png" alt="Python" width="20" height="20"> Python Programs
 - [Math Notation Fix from PPT](https://github.com/ow-n/My-Practice-Projects/blob/main/Python/Math%20PPT%20to%20MD%20Translate/Discrete%20Notation%20Change.py)
-<br><br><br>
+<br><br><br><br>
 
 
 
