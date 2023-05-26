@@ -52,7 +52,6 @@ main:
 
 # ============================{ Subroutines }============================ #
 make_matrix_M:
-    move $s0, $ra           	# save the return address in $s0
     li $t0, 4               	# store constant '4' for loop termination
     beq $s3, $t0, exit_make_matrix	# if k == 4, then exit
 	beqz $t7, get_row			# if $t7 == 0, Print "Input 4x4 Matrix #"
@@ -65,17 +64,15 @@ make_matrix_M:
     syscall
     li $s1,0                	# reset $s1 (i / col) to 0
     jal print_arrow				# Print " -> "
-    sll $t4, $s3, 4				# calculate row offset, $s4 = $s3 * 16, 16 = 2^4
+    sll $t4, $s3, 4				# calculate row offset, $s5 = $s3 * 16, 16 = 2^4
     li $t0, 8              		# store constant '8' for loop termination
     jal string_to_integer		# Convert Row into integer + Stored in Matrix
     jal reset_i_j				# Resets index of string and integer
     # Store updated array index
     addi $s3, $s3, 1			# loop index k + 1
-    move $ra, $s0				# restore the return address from $s0
     j make_matrix_M				# Loop: jump to string_to_integer
 
 	string_to_integer:
-   		move $s7, $ra				# save the return address in $s7
    		beq $s1, $t0, exit_loop 	# if i == 8, then exit
    		la $t1, Row         		# load address of input buffer into $t1 (string_array index)
    		# Get position of string_array
@@ -86,44 +83,48 @@ make_matrix_M:
 		li $v0, 1					# [Service]: Print Integer in $a0
 		move $a0, $t2				# copy $t8 integer to $a0
 		syscall
-		jal print_space
+		li $v0, 11					# [Service]: Print Character
+		li $a0, 32					# load ASCII value for space into $a0
+		syscall
 		# Store integer in 
 		li $t3, 1
-		beq $t6, $t3, make_M1		# branch if t6(matrix counter) == 1
+		beq $s0, $t3, make_M1		# branch if $s0(matrix counter) == 1
 		li $t3, 2
-		beq $t6, $t3, make_M2		# branch if t6(matrix counter) == 2
+		beq $s0, $t3, make_M2		# branch if $s0(matrix counter) == 2
 
 		make_M1:
-			la $s4, M1                	# load address of integer matrix M1 into $s4
-			add $s4, $s4, $t4        	# add row offset (in $s4) to the address of M1
-			add $s4, $s4, $s2        	# add column number to offset to get next byte
-			sw $t2, 0($s4)           	# store new integer($a0) into M1($t3)
+			la $s5, M1                	# load address of integer matrix M1 into $s5
+			add $s5, $s5, $t4        	# add row offset (in $s5) to the address of M1
+			add $s5, $s5, $s2        	# add column number to offset to get next byte
+			sw $t2, 0($s5)           	# store new integer($a0) into M1($t3)
 			# Store updated array index
 			addi $s1, $s1, 2       		# i (input index) + 2 (2 digits + ' ')
 			addi $s2, $s2, 4			# j (int array) + 4 (next byte)
-			move $ra, $s7				# restore the return address from $s0
 			j string_to_integer			# Loop: jump to string_to_integer
 
 		make_M2:
-			la $s5, M2                	# load address of integer matrix M2 into $s5
-			add $s5, $s5, $t4        	# add row offset (in $s5) to the address of M2
-			add $s5, $s5, $s2        	# add column number to offset to get next byte
-			sw $t2, 0($s5)           	# store new integer($a0) into M2($s5)
+			la $s6, M2                	# load address of integer matrix M2 into $s6
+			add $s6, $s6, $t4        	# add row offset (in $s6) to the address of M2
+			add $s6, $s6, $s2        	# add column number to offset to get next byte
+			sw $t2, 0($s6)           	# store new integer($a0) into M2($s6)
 			# Store updated array index
 			addi $s1, $s1, 2       		# i (input index) + 2 (2 digits + ' ')
 			addi $s2, $s2, 4			# j (int array) + 4 (next byte)
-			move $ra, $s7				# restore the return address from $s0
 			j string_to_integer			# Loop: jump to string_to_integer
 
 	get_row:
-   	 	add $t6, $t6, 1				# to print next matrix "0 -> 1 -> 2"
+   	 	# Instructions that execute once in make_matrix loop
+   	 	addiu $sp, $sp, -4  		# allocate space on the stack
+		sw $ra, 0($sp)      		# store the return address to the stack
+   	 	add $s0, $s0, 1				# to print next matrix "0 -> 1 -> 2"
 		add $t7, $t7, 1				# stops "Input Matrix" from looping by $t7 + 1
 		li $s2, 0					# resets column counter (j / $s2) to 0
+		# Prints strings
 		li $v0, 4					# [Service]: Print String
 		la $a0, ask_matrix			# load address of ask_matrix
 		syscall
 		li $v0, 1					# [Service]: Print Integer
-		la $a0, ($t6)				# load address of matrix number
+		la $a0, 0($s0)				# load address of matrix number
 		syscall
 		j make_matrix_M				# Returns to make_matrix_M
 
@@ -154,34 +155,35 @@ make_matrix_M:
 		li $t7, 0					# resets condition for get_Row to branch
 		li $s3, 0					# resets condition for exit_make_matrix to branch
 		jal new_line
-		move $ra, $s0          		# restore the return address from $s0
+		lw $ra, 0($sp)      		# load the return address from the stack
+		addiu $sp, $sp, 4   		# deallocate the stack space
 		jr $ra						# Return from subroutine (using $ra)
 
 # ======================================================================= #
 
 # $t0 = M
 # $t1 = termination value
-# $t2 = 
+# $t2 = address of sum
 # $t3 = temp storage for sum
 # $t4 = branch condition
-# $t5 = 
-# $t6 = matrix number (0 -> 1 -> 2 -> ...)
-# $t7 = branch condition checker
 get_sum:
-	move $s0, $ra				# save the return address in $s0
+	addiu $sp, $sp, -4  		# allocate space on the stack
+	sw $ra, 0($sp)      		# store the return address to the stack
 	li $v0, 4					# [Service]: Print String
 	la $a0, print_sum			# load "Sum: "
 	syscall
 	li $s1, 0					# reset i to 0 ($s1)
 	li $t3, 0          			# initialize sum to 0
 	li $t1, 16					# termination value = size of matrix, 4x4=16
-	# if (matrix counter($t6) == 1 or 2) { 
+	la $t2, sum					# load address of sum into $s0
+	# if (matrix counter($s0) == 1 or 2) { 
 	li $t4, 1
-	beq $t6, $t4, load_M1		# branch if t6(matrix counter) == 1
+	beq $s0, $t4, load_M1		# branch if $s0(matrix counter) == 1
 	li $t4, 2
-	beq $t6, $t4, load_M2		# branch if t6(matrix counter) == 2
+	beq $s0, $t4, load_M2		# branch if $s0(matrix counter) == 2
 	# } else {
-	move $ra, $s0				# restore the return address from $s0
+	lw $ra, 0($sp)      		# load the return address from the stack
+	addiu $sp, $sp, 4  	 		# deallocate the stack space
 	jr $ra
 
 	load_M1:
@@ -191,13 +193,14 @@ get_sum:
 				# la $a0, inside_M1
 				# syscall
 		jal calculate_sum			# calculate sum into $t3
-		sw $t3, sum 	     		# store the sum
+		sw $t3, 0($t2)				# store sum into sum
 		
 		li $v0, 1              		# [Service]: Print Integer
 		lw $a0, sum        	  		# load sum
 		syscall
 		jal new_line
-		move $ra, $s0				# restore the return address from $s0
+		lw $ra, 0($sp)      		# load the return address from the stack
+		addiu $sp, $sp, 4   		# deallocate the stack space
 		jr $ra
 	
 	load_M2:
@@ -207,20 +210,21 @@ get_sum:
 				# la $a0, inside_M2
 				# syscall	
 		jal calculate_sum			# calculate sum into $t3
-		sw $t3, sum 	     		# store the sum
+		sw $t3, 0($t2)				# store sum into sum
 		
 		li $v0, 1              		# [Service]: Print Integer
 		move $a0, $t3        	  	# move the sum to $a0
 		syscall
 		jal new_line
-		move $ra, $s0				# restore the return address from $s0
+		lw $ra, 0($sp)      		# load the return address from the stack
+		addiu $sp, $sp, 4   		# deallocate the stack space
 		jr $ra
 		
 		calculate_sum:
     		beq $s1, $t1, exit_loop 	# exit if loop counter($s1) = 16
     		lw $t4, 0($t0)          	# load the current array element into $t4 from M($t0)
    			add $t3, $t3, $t4       	# add the current element to the sum($t3)
-   				# Debugging - Prints each step of addition1 2 3 4
+   				# Debugging - Prints each step of addition1
 				li $v0, 1
 				la $a0, ($t3)
 				syscall
@@ -234,47 +238,50 @@ get_sum:
 # ======================================================================= #
 
 get_parity:
-	li $v0, 4					# [Service]: Print String
-	la $a0, parity				# "Parity: "
+	addiu $sp, $sp, -4  	# allocate space on the stack
+	sw $ra, 0($sp)      	# store the return address to the stack
+	li $v0, 4				# [Service]: Print String
+	la $a0, parity			# "Party: "
 	syscall
-	move $s0, $ra				# save the return address in $s0
-    lw $t0, sum					# load the sum into $t0
-	li $v0, 1					# [Service]: Print Integer
-    andi $t1, $t0, 1			# bitwise AND between the sum and 1 to check the least significant bit
-    beq $t1, $zero, even		# if the result is 0, jump to even
-    li $a0, 1					# load 1 (for odd) into $a0
-    jal print_result			# jump to print_result
-   	move $ra, $s0				# move return address back to $ra
-   	jr $ra
+    lw $t0, sum            	# load the sum into $t0
+	li $v0, 1              	# [Service]: Print Integer
+    andi $t1, $t0, 1       	# bitwise AND between the sum and 1 to check the least significant bit
+    # Even:
+    beq $t1, $zero, even   	# if the result is 0, jump to even
+    # Odd:
+    li $a0, 1              	# load 1 (for odd) into $a0
+	j print_result
 
 	even:
-   		li $a0, 0					# load 0 (for even) into $a0
-   		j print_result
+    	li $a0, 0              	# load 0 (for even) into $a0
 
 	print_result:
-    	syscall						# print the result (0 or 1)
+    	syscall                	# print the result (0 or 1)
     	jal new_line
     	jal new_line
-   	 	move $ra, $s0				# restore the return address from $s0
-    	jr $ra						# return
+    	lw $ra, 0($sp)      	# load the return address from the stack
+		addiu $sp, $sp, 4   	# deallocate the stack space
+    	jr $ra                 	# return
 
 # ======================================================================= #
 
 print_M:
-	move $s0, $ra				# save the return address in $s0
-    li $s1, 0              		# initialize row counter i to 0 ($s1)
+	addiu $sp, $sp, -4  		# allocate space on the stack
+	sw $ra, 0($sp)      		# store the return address to the stack
+	li $s1, 0              		# initialize row counter i to 0 ($s1)
     li $s2, 0            		# initialize column counter j to 0 ($s2)
     li $t0, 4             		# store constant '4' for loop termination
     li $v0, 4					# [Service]: Print String
- 	# if (matrix counter($t6) == 1 or 2 or 3) { branch
+ 	# if (matrix counter($s0) == 1 or 2 or 3) { branch
 	li $t4, 1
-	beq $t6, $t4, print_M1		# branch if t6(matrix counter) == 1
+	beq $s0, $t4, print_M1		# branch if $s0(matrix counter) == 1
 	li $t4, 2
-	beq $t6, $t4, print_M2		# branch if t6(matrix counter) == 2
+	beq $s0, $t4, print_M2		# branch if $s0(matrix counter) == 2
 	li $t4, 3
-	beq $t6, $t4, print_MM		# branch if t6(matrix counter) == 3
+	beq $s0, $t4, print_MM		# branch if $s0(matrix counter) == 3
 	# } else {
-	move $ra, $s0				# restore the return address from $s0
+	lw $ra, 0($sp)      		# load the return address from the stack
+	addiu $sp, $sp, 4   		# deallocate the stack space
 	jr $ra
 	
 	print_M1:
@@ -284,7 +291,8 @@ print_M:
 		la $t5, M1					# load address of integer matrix M1 into $t5
     	jal print_M_loop
     	jal new_line
-    	move $ra, $s0               # restore the return address from $s0
+    	lw $ra, 0($sp)      		# load the return address from the stack
+		addiu $sp, $sp, 4   		# deallocate the stack space
 		jr $ra 
 	
 	print_M2:
@@ -294,7 +302,8 @@ print_M:
 		la $t5, M2					# load address of integer matrix M2 into $t5
     	jal print_M_loop
     	jal new_line
-    	move $ra, $s0               # restore the return address from $s0
+    	lw $ra, 0($sp)      		# load the return address from the stack
+		addiu $sp, $sp, 4   		# deallocate the stack space
 		jr $ra 
 
 	print_MM:
@@ -304,7 +313,8 @@ print_M:
 		la $t5, MM					# load address of integer matrix M2 into $t5
     	jal print_M_loop
     	jal new_line
-    	move $ra, $s0               # restore the return address from $s0
+    	lw $ra, 0($sp)      		# load the return address from the stack
+		addiu $sp, $sp, 4   		# deallocate the stack space
 		jr $ra 
 
 		print_M_loop:
@@ -328,24 +338,27 @@ print_M:
     		j print_M_loop             	# jump to print_M1_loop
 
 			next_row:
-    			move $s7, $ra				# save the return address in $s7
+    			addiu $sp, $sp, -4  		# allocate space on the stack
+				sw $ra, 0($sp)      		# store the return address to the stack
     			li $s1, 0                   # reset column counter j to 0 ($s2)
     			addi $s2, $s2, 1            # increment row counter j
     			jal new_line                # call new_line to print a new line
-    			move $ra, $s7				# return address from $s7
+    			lw $ra, 0($sp)      		# load the return address from the stack
+				addiu $sp, $sp, 4   		# deallocate the stack space
     			j print_M_loop             	# jump to print_M1_loop   
 
 # ======================================================================= #
 
 multiply_matrix:
-	move $s0, $ra			# save the return address in $s0
+	addiu $sp, $sp, -4  	# allocate space on the stack
+	sw $ra, 0($sp)      	# store the return address to the stack
 	li $v0, 4
 	la $a0, MM_process
 	syscall
 	jal new_line
-	la $s4, M1 				# load the base address of matrix M1 into $s4
-	la $s5, M2 				# load the base address of matrix M2 into $s5
-	la $s6, MM 				# load the base address of matrix MM into $s6
+	la $s5, M1 				# load the base address of matrix M1 into $s5
+	la $s6, M2 				# load the base address of matrix M2 into $s6
+	la $s7, MM 				# load the base address of matrix MM into $s7
 
 	# Save Loop termination value (4) + Initialize loop variables
 	li $t1, 4 				# $t1 = 4 (row size/loop end)
@@ -355,49 +368,54 @@ multiply_matrix:
 	L2: li $s3, 0 				# k = 0; restart 3rd for loop
 
 		# First Step: skip over the i “1D Arrays” / Rows, to get the one we want.
-		# So: multiply the index in the first dimension by the size of the row, 32.
+		# So: multiply the index in the first dimension by the size of the row, 4.
 		# Since 4 is a power of 2, we can use a shift instead:
 		sll $t2, $s1, 2 		# $t2 = i * 2^2 (size of row of c)
 
-		# Add the second index to select the jth element of the desired row:
+		# Now we add the second index to select the jth element of the desired row:
 		addu $t2, $t2, $s2 		# $t2 = i * size(row) + j
 
-		# Multiply $t2 by the size of matrix elements in bytes to turn sum into byte index.
-		# Since each element is 8 bytes for double precision, we can instead shift left by 2:
+		# To turn this sum into a byte index, we multiply it by the size of a matrix element
+		# in bytes. Since each element is 4 byte, we can instead shift left by 02
 		sll $t2, $t2, 2 		# $t2 = byte offset of [i][j]
 
-		# Add this sum to the base address of c, giving the address of c[i][j],
-		# and then load the double precision number c[i][j] into $f4:
-		addu $t2, $s6, $t2 		# $t2 = byte address of c[i][j]
+		# Next we add this sum to the base address of c, giving the address of c[i][j],
+		# and then load the number c[i][j] into $t3:
+		addu $t2, $s7, $t2 		# $t2 = byte address of c[i][j]
 		lw $t3, 0($t2) 			# $t3 = 4 bytes of c[i][j]
 
-		# Repeat last 5 instructions to calculate address and load double precision number b[k][j].
+		# The following five instructions are virtually identical to the last five:
+		# Calculate the address and then load the number b[k][j].
 		L3: sll $t0, $s3, 2 		# $t0 = k * 2^2 (size of row of b)
 			addu $t0, $t0, $s2		# $t0 = k * size(row) + j
 			sll $t0, $t0, 2 		# $t0 = byte offset of [k][j]
-			addu $t0, $s5, $t0 		# $t0 = byte address of b[k][j]
+			addu $t0, $s6, $t0 		# $t0 = byte address of b[k][j]
 			lw $t4, 0($t0) 			# $t4 = 4 bytes of b[k][j]
 
-			# Repeat again to calculate the address and load double precision number a[i][k].
+			# Similarly, the next five instructions are like the last five:
+			# Calculate the address and then load the number a[i][k].
 			sll $t0, $s1, 2 		# $t0 = i * 4 (size of row of a)
 			addu $t0, $t0, $s3 		# $t0 = i * size(row) + k
 			sll $t0, $t0, 2 		# $t0 = byte offset of [i][k]
-			addu $t0, $t0, $s4		# $t0 = byte address of a[i][k]
+			addu $t0, $t0, $s5		# $t0 = byte address of a[i][k]
 			lw $t5, 0($t0) 			# $t5 = 4 bytes of a[i][k]
 
-			# Integer Operations after loading all data: multiply elements of a and b
-			# located in registers $f18 and $f16, and then accumulate the sum in $f4.
+			# Now that we have loaded all the data, we are finally ready to do some
+			# operations! We multiply elements of a and b located in registers $t5 and $t4,
+			# and then accumulate the sum in $t3.
 			mul $t4, $t5, $t4 		# $t4 = a[i][k] * b[k][j]
 			add $t3, $t3, $t4 		# $t3 = c[i][j] + a[i][k] * b[k][j]
 
-
-			# Store sum accumulated in $f4 into c[i][j] ($t2)
-			# Increment index k, loop back if not 4, if is then end inner loop
+			# The final block increments the index k and loops back if the5 5 5 5 index is not 4.
+			# If it is 4, and thus the end of the innermost loop, we need to store the sum
+			# accumulated in $t3 into c[i][j].
 			addiu $s3, $s3, 1 		# $k = k + 1
 			bne $s3, $t1, L3 		# if (k != 32) go to L3
 			sw $t3, 0($t2) 			# c[i][j] = $t3
 
-			# Increment index i and j for middle and outerloop until 4
+			# Similarly, these final four instructions increment the index variable of the
+			# middle and outermost loops, looping back if the index is not 4 and exiting if
+			# the index is 4.
 			addiu $s2, $s2, 1 		# $j = j + 1
 					# Debugging - Prints everytime j loop
 					li $v0, 4
@@ -413,8 +431,9 @@ multiply_matrix:
 			bne $s1, $t1, L1 		# if (i != 4) go to L1
 			
 			jal new_line
- 			add $t6, $t6, 1			# so that print_matrix know to print the 3rd matrix
- 			move $ra, $s0			# restores return address back to $ra
+ 			add $s0, $s0, 1			# so that print_matrix know to print the 3rd matrix
+			lw $ra, 0($sp)      	# load the return address from the stack
+			addiu $sp, $sp, 4   	# deallocate the stack space
 			jr $ra
 
 # ======================================================================= #
@@ -442,14 +461,9 @@ exit_program:
 
 
 # =========================={ Notes }========================== #
-# $s0 = return address, nested loop 1
-# $s1 = i (rows), $s2 = j (columns)
-# $s3 = termination value
-# $s4 = M1, $s5 = M2, $s6 = MM
-# $s7 = return address, nested loop 2
-
-# $t6 = matrix number (0 -> 1 -> 2 -> ...)
-# $t7 = branch condition checker
+# $s0 = matrix counter (0 -> 1 -> 2 -> ...)
+# $s1 = i (rows), $s2 = j (columns) $s3 = k
+# $s5 = M1, $s6 = M2, $s7 = MM
 
 
 # ======================={ Output One }======================= #
