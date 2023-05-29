@@ -11,7 +11,7 @@
   <h2 align="center">My Coding Journey</h3>
 
   <p align="center">
-    Click to see the programs I built along the way 👇🏼
+    Click to see the programs I built along the way <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Backhand%20Index%20Pointing%20Down%20Light%20Skin%20Tone.png" alt="Backhand Index Pointing Down Light Skin Tone" width="25" height="25" />
   </p>
   
   <div>
