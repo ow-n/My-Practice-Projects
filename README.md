@@ -70,6 +70,7 @@
 
 
 <!-- ASSEMBLY -->
+<!-- 1) Intro to MIPS -->
 ## <img src="icons/AssemblyScript.png" alt="Assembly" width="20" height="20"> Assembly Programs
 <p style="margin-left: 0;">1) Introduction to MIPS</p>
 <ul style="margin-top: -10px;">
@@ -77,22 +78,31 @@
 <li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/Dealing%20with%20Names%20and%20Age.asm">Dealing with Names and Age</a></li>
 <li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/Simple%20Addition.asm">Simple Addition</a></li>
 </ul>
+<!-- 2) ASCII Conversion -->
 <p style="margin-left: 0;">2) ASCII Conversion</p>
 <ul style="margin-top: -10px;">
 <li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/ASCII%20Conversion%20Arithmetic.asm">Arithmetic / Vector Format / Place Value</a></li>
 <li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/ASCII%20Conversion%20Masking.asm">Masking / Procedures / Matrix</a></li>
 <li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/Loop%20to%20Sum%20Matrix.asm">Matrix Summation using Loops</a></li>
 </ul>
+<!-- 3) Matrix Multiply -->
 <p style="margin-left: 0;">3) Matrix Multiply</p>
 <ul style="margin-top: -10px;">
 <li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/4x4%20Integer%20Matrix%20Multiply.asm">4x4 Integer Matrix Multiply</a></li>
 </ul>
+<!-- 4) Loop Unrolling -->
 <p style="margin-left: 0;">4) Loop Unrolling</p>
 <ul style="margin-top: -10px;">
 <li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/MM%20Unrolled%20Once.asm">Matrix Multiply Unrolled Once</a></li>
 <li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/MM%20Completely%20Unrolled.asm">Matrix Multiply Completely Unrolled</a></li>
 </ul>
-<p style="margin-left: 0;">C Code Translations</p>
+<!-- 5) Caches and Associativity -->
+<p style="margin-left: 0;">5) Caches and Associativity</p>
+<ul style="margin-top: -10px;">
+<li><a href=""> </a></li>
+</ul>
+<!-- 0) C Code Translations -->
+<p style="margin-left: 0;">0) C Code Translations</p>
 <ul style="margin-top: -10px;">
 <li><a href="https://github.com/ow-n/My-Practice-Projects/blob/71b7e85775b96ffda69d4c9848044514adf82eae/Assembly/32x32%20Floating%20Point%20Matrix%20Multiply.asm">32x32 Floating Point Matrix Multiply</a></li>
 <li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/Creating%20Loops.asm">Creating Loops</a></li>
