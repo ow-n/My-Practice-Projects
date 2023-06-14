@@ -48,6 +48,9 @@ main:
 	
 	jal multiply_matrix
 	jal print_MM
+
+	jal multiply_matrix_blocked
+	jal print_MM
 	
 	jal exit_program
 
@@ -260,6 +263,64 @@ multiply_matrix:
 			jr $ra
 
 # ======================================================================= #
+
+multiply_matrix_blocked:
+	addiu $sp, $sp, -4  	# allocate space on the stack
+	sw $ra, 0($sp)       	# store the return address to the stack
+	li $v0, 4
+	la $a0, MMB_process
+	syscall
+	jal new_line
+	la $s5, M1 				# load the base address of matrix M1 into $s5
+	la $s6, M2 				# load the base address of matrix M2 into $s6
+	la $s7, MM 				# load the base address of matrix MM into $s7
+
+	li $t1, 8 				# Loop end = 8 as we are dealing with 8x8 matrices
+	li $s1, 0 				# i = 0; initialize 1st for loop
+	
+	MMB_L1: li $s2, 0 			# j = 0; restart 2nd for loop
+	MMB_L2: li $s3, 0 			# k = 0; restart 3rd for loop
+		li $t3, 0 				# reset $t3 to 0 for each output element
+
+	# Starting of the 1st for loop (i loop)
+	MMB_L3: sll $t2, $s2, 3 	# $t2 = j * 8 (size of block of c)
+		addu $t2, $t2, $s1 		# $t2 = j * size(block) + i
+		sll $t2, $t2, 2 		# $t2 = byte offset of [i][j]
+		addu $t2, $s7, $t2 		# $t2 = byte address of c[i][j]
+
+		sll $t0, $s3, 3 		# $t0 = k * 8 (size of block of a)
+		addu $t0, $t0, $s1 		# $t0 = k * size(block) + i
+		sll $t0, $t0, 2 		# $t0 = byte offset of [i][k]
+		addu $t0, $s5, $t0		# $t0 = byte address of a[i][k]
+		lw $t5, 0($t0) 			# $t5 = 4 bytes of a[i][k]
+
+		sll $t0, $s3, 3 		# $t0 = k * 8 (size of block of b)
+		addu $t0, $t0, $s2		# $t0 = k * size(block) + j
+		sll $t0, $t0, 2 		# $t0 = byte offset of [k][j]
+		addu $t0, $s6, $t0 		# $t0 = byte address of b[k][j]
+		lw $t4, 0($t0) 			# $t4 = 4 bytes of b[k][j]
+
+		mul $t4, $t5, $t4      	# $t4 = a[i][k] * b[k][j]
+		add $t3, $t3, $t4      	# $t3 = c[i][j] + a[i][k] * b[k][j]
+
+		addiu $s3, $s3, 1      	# $k = k + 1
+		bne $s3, $t1, MMB_L3   	# if (k != 8) go to L3
+		
+		sw $t3, 0($t2)         	# c[i][j] = $t3; save the result only after the inner loop
+
+		addiu $s2, $s2, 1 		# $j = j + 1
+		bne $s2, $t1, MMB_L2	# if (j != 8) go to L2
+		addiu $s1, $s1, 1 		# $i = i + 1
+		bne $s1, $t1, MMB_L1	# if (i != 8) go to L1
+	
+	jal new_line
+	add $s0, $s0, 1			# so that print_matrix know to print the 3rd matrix
+	lw $ra, 0($sp)      	# load the return address from the stack
+	addiu $sp, $sp, 4   	# deallocate the stack space
+	jr $ra
+
+# ======================================================================= #
+
 exit_program:
 	li $v0, 10				# [System]: Exit
 	syscall
@@ -278,3 +339,65 @@ exit_program:
 
 	exit_loop:
 		jr $ra					# Return from subroutine (using $ra)
+
+
+
+
+# =========================={ Notes }========================== #
+# $s0 = matrix counter (0 -> 1 -> 2 -> ...)
+# $s1 = i (rows), $s2 = j (columns) $s3 = k
+# $s5 = M1, $s6 = M2, $s7 = MM
+
+
+# ======================={ Output One }======================= #
+# Printing Matrix 1...
+# 1 1 1 1 1 1 1 1 
+# 1 1 1 1 1 1 1 1 
+# 1 1 1 1 1 1 1 1 
+# 1 1 1 1 1 1 1 1 
+# 1 1 1 1 1 1 1 1 
+# 1 1 1 1 1 1 1 1 
+# 1 1 1 1 1 1 1 1 
+# 1 1 1 1 1 1 1 1 
+# 
+# Printing Matrix 2...
+# 1 1 1 1 1 1 1 1 
+# 2 2 2 2 2 2 2 2 
+# 3 3 3 3 3 3 3 3 
+# 4 4 4 4 4 4 4 4 
+# 5 5 5 5 5 5 5 5 
+# 6 6 6 6 6 6 6 6 
+# 7 7 7 7 7 7 7 7 
+# 8 8 8 8 8 8 8 8 
+# 
+# Multiplying M1 to M2...
+# Loop j | Loop j | Loop j | Loop j | Loop j | Loop j | Loop j | Loop j | Loop i | 
+# Loop j | Loop j | Loop j | Loop j | Loop j | Loop j | Loop j | Loop j | Loop i | 
+# Loop j | Loop j | Loop j | Loop j | Loop j | Loop j | Loop j | Loop j | Loop i | 
+# Loop j | Loop j | Loop j | Loop j | Loop j | Loop j | Loop j | Loop j | Loop i | 
+# Loop j | Loop j | Loop j | Loop j | Loop j | Loop j | Loop j | Loop j | Loop i | 
+# Loop j | Loop j | Loop j | Loop j | Loop j | Loop j | Loop j | Loop j | Loop i | 
+# Loop j | Loop j | Loop j | Loop j | Loop j | Loop j | Loop j | Loop j | Loop i | 
+# Loop j | Loop j | Loop j | Loop j | Loop j | Loop j | Loop j | Loop j | Loop i | 
+# 
+# Printing Matrix Multipled...
+# 36 36 36 36 36 36 36 36 
+# 36 36 36 36 36 36 36 36 
+# 36 36 36 36 36 36 36 36 
+# 36 36 36 36 36 36 36 36 
+# 36 36 36 36 36 36 36 36 
+# 36 36 36 36 36 36 36 36 
+# 36 36 36 36 36 36 36 36 
+# 36 36 36 36 36 36 36 36 
+# 
+# Block Multiplying M1 to M2...
+# 
+# Printing Matrix Multiplied...
+# 36 36 36 36 36 36 36 36 
+# 36 36 36 36 36 36 36 36 
+# 36 36 36 36 36 36 36 36 
+# 36 36 36 36 36 36 36 36 
+# 36 36 36 36 36 36 36 36 
+# 36 36 36 36 36 36 36 36 
+# 36 36 36 36 36 36 36 36 
+# 36 36 36 36 36 36 36 36 
