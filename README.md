@@ -101,6 +101,7 @@
 <ul style="margin-top: -10px;">
 <li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/8x8%20Blocked%20MM%20Caches.asm">Data Cache Simulation: 8x8 Blocked Matrix Multiply</a></li>
 <li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/Data%20Cache%20Sim%201.asm">Data Cache Simulation: 2 Variables</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/Data%20Cashe%20Sim%204%20Variables.asm">Data Cache Simulation: 4 Variables</a></li>
 </ul>
 <!-- 0) C Code Translations -->
 <p style="margin-left: 0;">0) C Code Translations</p>
