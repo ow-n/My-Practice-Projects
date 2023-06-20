@@ -74,41 +74,41 @@
 ## <img src="icons/AssemblyScript.png" alt="Assembly" width="20" height="20"> Assembly Programs
 <p style="margin-left: 0;">1) Introduction to MIPS</p>
 <ul style="margin-top: -10px;">
-<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/Plays%20Song%20-%20Harry%20Potter%20Theme.asm">Plays Harry Potter Theme</a></li>
-<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/Dealing%20with%20Names%20and%20Age.asm">Dealing with Names and Age</a></li>
-<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/Simple%20Addition.asm">Simple Addition</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/1)%20Intro%20to%20MIPS/Plays%20Song%20-%20Harry%20Potter%20Theme.asm">Plays Harry Potter Theme</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/1)%20Intro%20to%20MIPS/Dealing%20with%20Names%20and%20Age.asm">Dealing with Names and Age</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/1)%20Intro%20to%20MIPS/Simple%20Addition.asm">Simple Addition</a></li>
 </ul>
 <!-- 2) ASCII Conversion -->
 <p style="margin-left: 0;">2) ASCII Conversion</p>
 <ul style="margin-top: -10px;">
-<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/ASCII%20Conversion%20Arithmetic.asm">Arithmetic / Vector Format / Place Value</a></li>
-<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/ASCII%20Conversion%20Masking.asm">Masking / Procedures / Matrix</a></li>
-<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/Loop%20to%20Sum%20Matrix.asm">Matrix Summation using Loops</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/2)%20ASCII%20Conversion/ASCII%20Conversion%20Arithmetic.asm">Arithmetic / Vector Format / Place Value</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/2)%20ASCII%20Conversion/ASCII%20Conversion%20Masking.asm">Masking / Procedures / Matrix</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/2)%20ASCII%20Conversion/Loop%20to%20Sum%20Matrix.asm">Matrix Summation using Loops</a></li>
 </ul>
 <!-- 3) Matrix Multiply -->
 <p style="margin-left: 0;">3) Matrix Multiply</p>
 <ul style="margin-top: -10px;">
-<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/4x4%20Integer%20Matrix%20Multiply.asm">4x4 Integer Matrix Multiply</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/3)%20Matrix%20Multiply/4x4%20Integer%20Matrix%20Multiply.asm">4x4 Integer Matrix Multiply</a></li>
 </ul>
 <!-- 4) Loop Unrolling -->
 <p style="margin-left: 0;">4) Loop Unrolling</p>
 <ul style="margin-top: -10px;">
-<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/MM%20Unrolled%20Once.asm">Matrix Multiply Unrolled Once</a></li>
-<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/MM%20Completely%20Unrolled.asm">Matrix Multiply Completely Unrolled</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/4)%20Loop%20Unrolling/MM%20Unrolled%20Once.asm">Matrix Multiply Unrolled Once</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/4)%20Loop%20Unrolling/MM%20Completely%20Unrolled.asm">Matrix Multiply Completely Unrolled</a></li>
 </ul>
 <!-- 5) Caches and Associativity -->
 <p style="margin-left: 0;">5) Caches and Associativity</p>
 <ul style="margin-top: -10px;">
-<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/8x8%20Blocked%20MM%20Caches.asm">Data Cache Simulation: 8x8 Blocked Matrix Multiply</a></li>
-<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/Data%20Cache%20Sim%201.asm">Data Cache Simulation: 2 Variables</a></li>
-<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/Data%20Cashe%20Sim%204%20Variables.asm">Data Cache Simulation: 4 Variables</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/5)%20Caches%20and%20Associativity/8x8%20Blocked%20MM%20Caches.asm">Data Cache Simulation: 8x8 Blocked Matrix Multiply</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/5)%20Caches%20and%20Associativity/Data%20Cache%20Sim%202%20Variables.asm">Data Cache Simulation: 2 Variables</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/5)%20Caches%20and%20Associativity/Data%20Cashe%20Sim%204%20Variables.asm">Data Cache Simulation: 4 Variables</a></li>
 </ul>
 <!-- 0) C Code Translations -->
 <p style="margin-left: 0;">0) C Code Translations</p>
 <ul style="margin-top: -10px;">
-<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/71b7e85775b96ffda69d4c9848044514adf82eae/Assembly/32x32%20Floating%20Point%20Matrix%20Multiply.asm">32x32 Floating Point Matrix Multiply</a></li>
-<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/Creating%20Loops.asm">Creating Loops</a></li>
-<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/Creating%20Arrays.asm">Creating Arrays</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/0)%20C%20Code%20Translation/32x32%20Floating%20Point%20Matrix%20Multiply.asm">32x32 Floating Point Matrix Multiply</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/0)%20C%20Code%20Translation/Creating%20Loops.asm">Creating Loops</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/0)%20C%20Code%20Translation/Creating%20Arrays.asm">Creating Arrays</a></li>
 </ul>
 <br><br><br>
 
