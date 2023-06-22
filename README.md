@@ -39,13 +39,19 @@
 
 <!-- JAVA -->
 ## <img src="icons/Java.svg" alt="Java" width="20" height="20"> Java Programs
+<!-- JavaFX Programs -->
+<p style="margin-left: 0;">JavaFX Programs</p>
 <ul>
-<li><a href="https://github.com/ow-n/My-Practice-Projects/tree/main/Java/Card%20Game">Card Game</a></li>
-<li><a href="https://github.com/ow-n/My-Practice-Projects/tree/main/Java/GUICards">GUICards</a></li>
-<li><a href="https://github.com/ow-n/My-Practice-Projects/tree/main/Java/Optical%20Barcode%20Scanner">Optical Barcode Scanner</a></li>
-<li><a href="https://github.com/ow-n/My-Practice-Projects/tree/main/Java/Student%20Score%20Tracker">Student Scores</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/tree/main/Java/Programs/GUICards">GUICards</a></li>
 </ul>
-
+<!-- Programs -->
+<p style="margin-left: 0;">Programs</p>
+<ul>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/tree/main/Java/Programs/Card%20Game">Card Game</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/tree/main/Java/Programs/Optical%20Barcode%20Scanner">Optical Barcode Scanner</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/tree/main/Java/Programs/Student%20Score%20Tracker">Student Scores</a></li>
+</ul>
+<!-- Small Programs -->
 <p>Small Programs: <a href="https://github.com/ow-n/My-Practice-Projects/tree/main/Java/Small%20Programs/src/ships">Ships</a> / <a href="https://github.com/ow-n/My-Practice-Projects/tree/main/Java/Small%20Programs/src/savingsaccount">Savings Account</a> / <a href="https://github.com/ow-n/My-Practice-Projects/tree/main/Java/Small%20Programs/src/salesdata">Sales Data</a> / <a href="https://github.com/ow-n/My-Practice-Projects/tree/main/Java/Small%20Programs/src/personalinfo">Storing Info</a> / <a href="https://github.com/ow-n/My-Practice-Projects/tree/main/Java/Small%20Programs/src/cointoss">Coin Toss</a></p>
 <br><br><br>
 
@@ -70,8 +76,8 @@
 
 
 <!-- ASSEMBLY -->
-<!-- 1) Intro to MIPS -->
 ## <img src="icons/AssemblyScript.png" alt="Assembly" width="20" height="20"> Assembly Programs
+<!-- 1) Intro to MIPS -->
 <p style="margin-left: 0;">1) Introduction to MIPS</p>
 <ul style="margin-top: -10px;">
 <li><a href="https://github.com/ow-n/My-Practice-Projects/blob/main/Assembly/1)%20Intro%20to%20MIPS/Plays%20Song%20-%20Harry%20Potter%20Theme.asm">Plays Harry Potter Theme</a></li>
