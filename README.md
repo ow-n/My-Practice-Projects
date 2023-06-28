@@ -44,11 +44,12 @@
 <ul>
 <li><a href="https://github.com/ow-n/My-Practice-Projects/tree/main/Java/Programs/GUICards">GUICards</a></li>
 </ul>
-<!-- Programs -->
-<p style="margin-left: 0;">Programs</p>
+<!-- Console Programs -->
+<p style="margin-left: 0;">Console Programs</p>
 <ul>
-<li><a href="https://github.com/ow-n/My-Practice-Projects/tree/main/Java/Programs/Card%20Game">Card Game</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/tree/main/Java/Programs/MatrixOperations">Matrix Operations</a></li>
 <li><a href="https://github.com/ow-n/My-Practice-Projects/tree/main/Java/Programs/Optical%20Barcode%20Scanner">Optical Barcode Scanner</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/tree/main/Java/Programs/Card%20Game">Card Classes</a></li>
 <li><a href="https://github.com/ow-n/My-Practice-Projects/tree/main/Java/Programs/Student%20Score%20Tracker">Student Scores</a></li>
 </ul>
 <!-- Small Programs -->
