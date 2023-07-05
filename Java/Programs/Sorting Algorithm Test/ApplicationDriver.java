@@ -6,10 +6,92 @@ import java.util.Comparator;
 public class ApplicationDriver {
 
    public static void main(String[] args) {
+      int[] arraySizes = { 50000, 100000, 150000, 200000, 250000, 300000 };
+      int[][] arraysBySize = new int[arraySizes.length][];
+      for (int i = 0; i < arraySizes.length; i++) {
+         arraysBySize[i] = generateRandomArray(arraySizes[i]);
+      }
 
+      System.out.println(
+            "| Array Size |   50,000 |  100,000 |  150,000 |  200,000 |" + 
+            "  250,000 |  300,000 |");
+      System.out.println(
+            "|------------|----------|----------|----------|----------|" + 
+            "----------|----------|");
+
+      performAndPrint("InsertionS", arraysBySize, new InsertionSort());
+      performAndPrint("Bubble Sor", arraysBySize, new BubbleSort());
+      performAndPrint("Merge Sort", arraysBySize, new MergeSort());
+      performAndPrint("Quick Sort", arraysBySize, new QuickSort());
+      performAndPrint("Heap Sort", arraysBySize, new HeapSortAlgorithm());
+      performAndPrint("Radix Sort", arraysBySize, new RadixSortAlgorithm());
+   }
+
+   private static int[] generateRandomArray(int size) {
+      int[] arr = new int[size];
+      for (int i = 0; i < size; i++) {
+         arr[i] = (int) (Math.random() * 1000);
+      }
+      return arr;
+   }
+
+   private static void performAndPrint(String name, int[][] arraysBySize,
+         SortAlgorithm sortAlgorithm) {
+      System.out.printf("| %-10s", name);
+      for (int[] arr : arraysBySize) {
+         int[] arrCopy = Arrays.copyOf(arr, arr.length);
+         long startTime = System.nanoTime();
+         sortAlgorithm.sort(arrCopy);
+         long endTime = System.nanoTime();
+         long executionTime = (endTime - startTime) / 1000000; // Convert to ms
+
+         System.out.printf(" | %6dms", executionTime);
+      }
+      System.out.println(" |");
    }
 
 }
+
+/******************************************************************************/
+/*                                  Output 1                                  */
+/****************************************************************************//*
+| Array Size |   50,000 |  100,000 |  150,000 |  200,000 |  250,000 |  300,000 |
+|------------|----------|----------|----------|----------|----------|----------|
+| InsertionS |    844ms |   2534ms |   1951ms |   3528ms |   5398ms |   7918ms |
+| Bubble Sor |   3342ms |  13155ms |  28069ms |  52293ms |  78509ms | 104967ms |
+| Merge Sort |      7ms |     17ms |     16ms |     26ms |     27ms |     40ms |
+| Quick Sort |     19ms |     18ms |     25ms |     39ms |     58ms |     80ms |
+| Heap Sort  |     43ms |     34ms |     55ms |     64ms |    103ms |    123ms |
+| Radix Sort |      5ms |      6ms |      9ms |      7ms |      9ms |     11ms |
+/******************************************************************************/
+
+
+/******************************************************************************/
+/*                                  Output 2                                  */
+/****************************************************************************//*
+| Array Size |   50,000 |  100,000 |  150,000 |  200,000 |  250,000 |  300,000 |
+|------------|----------|----------|----------|----------|----------|----------|
+| InsertionS |    864ms |   2741ms |   1782ms |   3168ms |   4989ms |   7180ms |
+| Bubble Sor |   2874ms |  12208ms |  28243ms |  52298ms |  81333ms | 108704ms |
+| Merge Sort |      8ms |     17ms |     19ms |     30ms |     33ms |     47ms |
+| Quick Sort |     11ms |     12ms |     28ms |     52ms |     70ms |    100ms |
+| Heap Sort  |     56ms |     54ms |     71ms |     76ms |    153ms |    159ms |
+| Radix Sort |      5ms |      8ms |     11ms |      9ms |     11ms |     13ms |
+/******************************************************************************/
+
+
+/******************************************************************************/
+/*                                  Output 3                                  */
+/****************************************************************************//*
+| Array Size |   50,000 |  100,000 |  150,000 |  200,000 |  250,000 |  300,000 |
+|------------|----------|----------|----------|----------|----------|----------|
+| InsertionS |    864ms |   2741ms |   1782ms |   3168ms |   4989ms |   7180ms |
+| Bubble Sor |   2874ms |  12208ms |  28243ms |  52298ms |  81333ms | 108704ms |
+| Merge Sort |      8ms |     17ms |     19ms |     30ms |     33ms |     47ms |
+| Quick Sort |     11ms |     12ms |     28ms |     52ms |     70ms |    100ms |
+| Heap Sort  |     56ms |     54ms |     71ms |     76ms |    153ms |    159ms |
+| Radix Sort |      5ms |      8ms |     11ms |      9ms |     11ms |     13ms |
+/******************************************************************************/
 
 
 /* ========================================================================== */
