@@ -42,7 +42,7 @@
 <!-- JavaFX Programs -->
 <p style="margin-left: 0;">JavaFX Programs</p>
 <ul>
-<li><a href="https://github.com/ow-n/My-Practice-Projects/tree/main/Java/Programs/GUICards">GUICards</a></li>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/tree/main/Java/JavaFX%20Programs/src/Table%20Top%20Card%20Selector">Table Top Card Selector</a></li>
 </ul>
 <!-- Console Programs -->
 <p style="margin-left: 0;">Console Programs</p>
