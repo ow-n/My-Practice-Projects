@@ -51,6 +51,55 @@ public class ApplicationDriver extends Application {
          this.order = 0;
       }
 
+      public boolean setOrder(int order) {
+         if (order >= 0 && order < 9) { // increase max order at own risk
+            this.order = order;
+            paint();
+            return true;
+         } else {
+            return false;
+         }
+      }
+
+      protected void paint() {
+         Point2D p1 = new Point2D(getWidth() / 2, 0);
+         Point2D p2 = new Point2D(30, getHeight() - 60);
+         Point2D p3 = new Point2D(getWidth() - 30, getHeight() - 60);
+
+         this.getChildren().clear(); // Clear the pane before redisplay
+
+         displayKochSnowFlake(order, p1, p2);
+         displayKochSnowFlake(order, p2, p3);
+         displayKochSnowFlake(order, p3, p1);
+      }
+
+      private void displayKochSnowFlake(int order, Point2D p1, Point2D p2) {
+         if (order == 0) {
+            Line line = new Line(p1.getX(), p1.getY(), p2.getX(), p2.getY());
+            this.getChildren().add(line);
+         } else {
+            double deltaX = p2.getX() - p1.getX();
+            double deltaY = p2.getY() - p1.getY();
+
+            Point2D x = new Point2D(p1.getX() + deltaX / 3,
+                  p1.getY() + deltaY / 3);
+            Point2D y = new Point2D(p1.getX() + deltaX * 2 / 3,
+                  p1.getY() + deltaY * 2 / 3);
+            Point2D z = new Point2D(
+                  (p1.getX() + p2.getX()) / 2 + Math.cos(Math.toRadians(30))
+                        * (p1.getY() - p2.getY()) / 3,
+                  (p1.getY() + p2.getY()) / 2 + Math.cos(Math.toRadians(30))
+                        * (p2.getX() - p1.getX()) / 3);
+
+            // Recursively display snow flakes on lines
+            displayKochSnowFlake(order - 1, p1, x);
+            displayKochSnowFlake(order - 1, x, z);
+            displayKochSnowFlake(order - 1, z, y);
+            displayKochSnowFlake(order - 1, y, p2);
+         }
+      }
+   }
+
    public static void main(String[] args) {
       launch(args);
    }
