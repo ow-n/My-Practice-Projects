@@ -42,6 +42,7 @@
 <!-- JavaFX Programs -->
 <p style="margin-left: 0;">JavaFX Programs</p>
 <ul>
+<li><a href="https://github.com/ow-n/My-Practice-Projects/tree/main/Java/JavaFX%20Programs/src/21%20Point%20Card%20Game">21 Point Card Game</a></li>
 <li><a href="https://github.com/ow-n/My-Practice-Projects/tree/main/Java/JavaFX%20Programs/src/Table%20Top%20Card%20Selector">Table Top Card Selector</a></li>
 </ul>
 <!-- Console Programs -->
