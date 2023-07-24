@@ -1,6 +1,4 @@
-Claim "x Î R, é5xù @ 1 mod 5
-3) This universal claim is false. Demonstrate a counterexample.
-4) For some reals, the claim is true. Demonstrate two examples, one positive and one negative.
-5) Suppose the claim is true for a particular y Î R. What can you say for certain about the real 
-number y? In other words, what are some necessary conditions for the claim to be true?
-6) Please name any people who were helpful to you, and describe how they helped.
+"a Î A, $b Î B ': P(a, b) ® ~R(a, b), and 
+$a Î A ': "b Î B, P(a, b) ® ~R(a, b).
+
+1 "b Î B, T(b) ® ~S(b) premise 2 ~T(b23) conclusion \ $b Î B ': S(b)
